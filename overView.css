@@ -1,64 +1,46 @@
 body {
-    /* grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%; */
-    margin-right: 5pc;
-    margin-left: 5pc;
     align-items: center;
     display: block;
 }
 
-th {
-    font-size: 1.5rem;
-}
-
 .habit_1 {
     color: #805159;
-    font-size: 1.5rem;
 }
 
 .habit_2 {
     color: #A3C4CB;
-    font-size: 1.5rem;
 }
 
 .habit_3 {
     color: #E2C6E2;
-    font-size: 1.5rem;
 }
 
 .habit_4 {
     color: #FFE1A8;
-    font-size: 1.5rem;
 }
 
 .habit_5 {
     color: #CED0AC;
-    font-size: 1.5rem;
 }
 
 .habit_6 {
     color: #E16452;
-    font-size: 1.5rem;
 }
 
 .habit_7 {
     color: #F3A0F0;
-    font-size: 1.5rem;
 }
 
 .habit_8 {
     color: #C89E98;
-    font-size: 1.5rem;
 }
 
 .habit_9 {
     color: #B0B6D8;
-    font-size: 1.5rem;
 }
 
 .habit_10 {
     color: #A3CBB1;
-    font-size: 1.5rem;
 }
 
 h1 {
@@ -66,28 +48,36 @@ h1 {
     font-size: 2rem;
 }
 
-main {
-    background-color: ;
-}
-
 table {
-    font-size: 1rem;
-    width: 100%;
-    align-items: center;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 5rem 1rem;
 }
 
-td {
+th {
+    font-size: 1.5rem;
     text-align: center;
 }
 
-
-/* 
-.monday {
-    grid-column-start: 2;
-    grid-column-end: 3;
+.days {
+    border: solid 1px;
+    border-radius: 50%;
+    color: rgb(245, 112, 112);
 }
 
-.tuesday {
-    grid-column-start: 3;
-    grid-column-end: 4;
-} */
+.home {
+    position: relative;
+    left: 15%;
+    margin-top: 5vh;
+}
+
+.activity {
+    position: relative;
+    right: 15%;
+    margin-top: 5vh;
+    float: right;
+    color: rgb(245, 112, 112);
+}
