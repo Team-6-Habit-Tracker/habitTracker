@@ -69,14 +69,15 @@ th {
 }
 
 .home {
-    position: relative;
-    left: 15%;
-    margin-top: 5vh;
+    position: absolute;
+    bottom: 0;
+    left: 5vh;
 }
 
 .activity {
-    position: relative;
-    right: 15%;
+    position: absolute;
+    bottom: 0;
+    right: 5vh;
     margin-top: 5vh;
     float: right;
     color: rgb(245, 112, 112);
