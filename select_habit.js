@@ -23,6 +23,7 @@ let chooseHabit = function (event) {
     let chosenHabit;
 
     chosenHabit = event.target; // li where the mouse was pressed
+    console.log(chosenHabit);
 
     if (chosenHabit.classList.contains('habit_1')) {
         habit = 'Training';
@@ -82,11 +83,6 @@ const removeSelectedHabits = function () {
     };
 };
 
-// const retrieveLocalStorage_selectHabit = function () {
-//     if (JSON.parse(localStorage.getItem('selectedHabit'))) { 
-//         habit = JSON.parse(localStorage.getItem('selectedHabit'));
-//     };
-// };
 
 console.log('Application has started');
 

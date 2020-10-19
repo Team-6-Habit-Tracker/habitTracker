@@ -1,5 +1,12 @@
 let addedHabits, habit, lastHabitID;
 
+
+// HABITS
+const fas = "fas";
+const training = 'fa-dumbbell';
+const takingStairs = 'fa-walking';
+const reading = 'fa-book';
+
 let setHabits = function() {
     for (let i = 0; i < addedHabits.length; i++){
         console.log(addedHabits[i].id)

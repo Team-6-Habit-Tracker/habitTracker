@@ -21,7 +21,10 @@ const displayMenu = function () {
 }
 
 const goBack = function () {
-    window.history.back();
+    if (window.history.back() != 'selectedHabitSettings.html') {
+        window.history.back();    
+    }
+    
 }
 
 
