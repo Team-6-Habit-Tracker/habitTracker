@@ -9,44 +9,54 @@ const wakeUpEarly = 'fa-clock';
 const noSocialMedia = 'fa-instagram';
 const noSmoking = 'fa-smoking-ban';
 const meditation = 'fa-om';
+const addedHabits = [
+    { "id": 0, "title": "No Smoking", "frequency": "1", "done": [true, false, false, false, false, false, false] },
+    { "id": 1, "title": "Studying", "frequency": "2", "done": [false, false, false, false, false, false, false] },
+    { "id": 2, "title": "Wake up Early", "frequency": "3", "done": [true, false, false, false, false, false, false] },
+    { "id": 3, "title": "No Social Media", "frequency": "4", "done": [true, false, false, false, false, false, false] }
+]
 
 let setHabits = function() {
-        for (let i = 0; i < addedHabits.length; i++) {
-            let div = document.querySelector('#tr' + addedHabits[i].id);
-            let icon = document.querySelector('#habit' + addedHabits[i].id);
-            let title = document.querySelector('#title' + addedHabits[i].id);
+    for (let i = 0; i < addedHabits.length; i++) {
+        let div = document.querySelector('#tr' + addedHabits[i].id);
+        let icon = document.querySelector('#habit' + addedHabits[i].id);
+        let title = document.querySelector('#title' + addedHabits[i].id);
 
-            div.classList.remove('hidden');
+        div.classList.remove('hidden');
 
 
-            if (addedHabits[i].title == '"Training') {
-                icon.classList.add(fas);
-                icon.classList.add(training);
-            } else if (addedHabits[i].title == 'Taking the Stairs') {
-                icon.classList.add(fas);
-                icon.classList.add(takingStairs);
-            } else if (addedHabits[i].title == 'Reading') {
-                icon.classList.add(fas);
-                icon.classList.add(reading);
-            } else if (addedHabits[i].title == 'Studying') {
-                icon.classList.add(fas);
-                icon.classList.add(study);
-            } else if (addedHabits[i].title == 'Eating Healthy') {
-                icon.classList.add(fas);
-                icon.classList.add(eatHealthy);
-            } else if (addedHabits[i].title == 'Go to Bed Early') {
-                icon.classList.add(fas);
-                icon.classList.add(goToBedEarly);
-            } else if (addedHabits[i].title == 'Wake up Early') {
-                icon.classList.add(fas);
-                icon.classList.add(wakeUpEarly);
-            } else if (addedHabits[i].title == 'No Socal Media') {
-                icon.classList.add('fab');
-                icon.classList.add(lessSocialMedia);
-            } else if (addedHabits[i].title == 'No Smoking') {
-                icon.classList.add(fas);
-                icon.classList.add(noSmoking);
-            } else if (addedHabits[i].title == 'Meditation') {
-                icon.classList.add(fas);
-                icon.classList.add(meditation);
-            };
+        if (addedHabits[i].title == '"Training') {
+            icon.classList.add(fas);
+            icon.classList.add(training);
+        } else if (addedHabits[i].title == 'Taking the Stairs') {
+            icon.classList.add(fas);
+            icon.classList.add(takingStairs);
+        } else if (addedHabits[i].title == 'Reading') {
+            icon.classList.add(fas);
+            icon.classList.add(reading);
+        } else if (addedHabits[i].title == 'Studying') {
+            icon.classList.add(fas);
+            icon.classList.add(study);
+        } else if (addedHabits[i].title == 'Eating Healthy') {
+            icon.classList.add(fas);
+            icon.classList.add(eatHealthy);
+        } else if (addedHabits[i].title == 'Go to Bed Early') {
+            icon.classList.add(fas);
+            icon.classList.add(goToBedEarly);
+        } else if (addedHabits[i].title == 'Wake up Early') {
+            icon.classList.add(fas);
+            icon.classList.add(wakeUpEarly);
+        } else if (addedHabits[i].title == 'No Socal Media') {
+            icon.classList.add('fab');
+            icon.classList.add(lessSocialMedia);
+        } else if (addedHabits[i].title == 'No Smoking') {
+            icon.classList.add(fas);
+            icon.classList.add(noSmoking);
+        } else if (addedHabits[i].title == 'Meditation') {
+            icon.classList.add(fas);
+            icon.classList.add(meditation);
+        }
+    }
+};
+
+setHabits();
