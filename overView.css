@@ -83,3 +83,7 @@ th {
     float: right;
     color: rgb(245, 112, 112);
 }
+
+.hidden {
+    display: none;
+}
