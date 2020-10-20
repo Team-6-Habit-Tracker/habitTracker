@@ -5,12 +5,15 @@ let selectedHabit = document.querySelector('.selected');
 
 let addedHabits = [];
 let habitIndex = [];
+let done = [];
 let frequency, lastHabitID, index;
 
-let HabitSetting = function (id, title, frequency) {
+
+let HabitSetting = function (id, title, frequency, done) {
     this.id = id;
     this.title = title;
     this.frequency = frequency;
+    this.done = done;
 }
 
 // HABITS
@@ -40,7 +43,11 @@ let addHabit = function () {
 
     frequency = document.querySelector('#frequency').value;
 
-    newHabit = new HabitSetting(lastHabitID, habit, frequency);
+    for (let i = 0; i < 7; i++) {
+        done[i] = false;
+    };
+
+    newHabit = new HabitSetting(lastHabitID, habit, frequency, done);
     addedHabits.push(newHabit);
 
     lastHabitID++;

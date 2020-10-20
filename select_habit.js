@@ -25,6 +25,7 @@ let chooseHabit = function (event) {
     chosenHabit = event.target; // li where the mouse was pressed
     console.log(chosenHabit);
 
+    // Could make a for loop here to clean up the code if theres time
     if (chosenHabit.classList.contains('habit_1')) {
         habit = 'Training';
         index = 'habit_1';
