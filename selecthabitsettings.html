@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
        <title>Habit settings</title>
         <!--FONTS-->
@@ -23,27 +22,25 @@
     </head>
     <body>
         <div class="back_x">
+            <a href="file:///Users/elsabynke/Documents/GitHub/habitTracker/selecthabit2.html">
              <i class="fas fa-times"></i>
-         </div>
+             </a>
+        </div>
     <header> 
-         
-        <div class="habit_container"> 
-        <div class="habit_icon"> 
-
-        <i class="fas fa-dumbbell"></i>
-      </div>   
             
-</div>
- 
-     <h2>TRAINING</h2>
+        <div class="habit_container"> 
+        <i class="" id="icon"> </i>
+
+      </div>   
+        
+     <p class="selected"></p>
      </header>
     
        <main>
-      <p class="habit_text">How many times per week do you want to 
-complete this habit?</p>
+      <label for="frequency"  class="habit_text"> <br> How many times per week do you want to 
+complete this habit?</label>
         <form class="selecttime"> 
-        <select name = "dropdown" class="selecttime_dropdown">
-             <option value = "" selected></option>
+        <select id="frequency">
             <option value = "1">1</option>
             <option value = "2">2</option>
             <option value = "3">3</option>
@@ -51,11 +48,12 @@ complete this habit?</p>
             <option value = "5">5</option>
             <option value = "6">6</option>
             <option value = "7">7</option>
-         </select>
-         <input type="button" value="OK" id="selecttime_button"> 
+         </select> 
+         <input type="button" value="Add habit" id="add_habit" > 
         </form>
   </main> 
-        <script src="" async defer></script>
+        <script src="selectedHabitSettings.js"></script>
+        <script src="common.js"></script>
         <footer>
 
         </footer>
