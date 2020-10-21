@@ -1,156 +1,93 @@
-let menu = document.querySelector('.menu');
-let dropDown = document.querySelector('.drop-down');
-let back = document.querySelector('.go_back');
 
 // select habit page
 let selectHabitList = document.querySelector('#select_habit_list');
 let select = document.querySelectorAll('.select');
 
-// selected habit settings page
-let selectedHabit = document.querySelector('.selected');
+let habitIndex = [];
+let habit, index;
 
-let addedHabits = [];
-let allAddedHabits = [];
+// HABITS
+const fas = "fas";
+const training = 'fa-dumbbell';
+const takingStairs = 'fas fa-walking';
+const reading = 'fas fa-book';
 
-const setupEventListeners = function() {
-    menu.addEventListener('click', displayMenu);
 
-    // select habit page
-    if (window.location == "file:///Users/emiliafrisell/Desktop/GitHub/habitTracker/select_habit.html") {
-        selectHabitList.addEventListener('click', setHabit)
-    }
+const setupEventListeners_selectHabit = function() {
 
-    back.addEventListener('click', goBack)
-}
+    selectHabitList.addEventListener('click', chooseHabit)
+    
+};
 
-const displayMenu = function () {
-    if (menu.classList.contains('fa-bars')) { //menu is not open
-        menu.classList.remove('fa-bars');
-        menu.classList.add('fa-times');
-        dropDown.classList.remove('hidden');
-    } else if (menu.classList.contains('fa-times')) {
-        menu.classList.remove('fa-times');
-        menu.classList.add('fa-bars');
-        dropDown.classList.add('hidden');
-    }
-}
-
-let setHabit = function (event) {
+let chooseHabit = function (event) {
     let chosenHabit;
 
     chosenHabit = event.target; // li where the mouse was pressed
+    console.log(chosenHabit);
 
+    // Could make a for loop here to clean up the code if theres time
     if (chosenHabit.classList.contains('habit_1')) {
-        habit = 'habit_1';
-        addedHabits.push(habit);
-
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));   
-        localStorage.setItem('added', JSON.stringify(addedHabits));
+        habit = 'Training';
+        index = 'habit_1';
 
     } else if (chosenHabit.classList.contains('habit_2')) {
-        habit = 'habit_2';
-        addedHabits.push(habit);
+        habit = 'Taking the Stairs';
+        index = 'habit_2';
 
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));
-        localStorage.setItem('added', JSON.stringify(addedHabits));
-        
     } else if (chosenHabit.classList.contains('habit_3')) {
-        habit = 'habit_3';
-        addedHabits.push(habit);
-
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));
-        localStorage.setItem('added', JSON.stringify(addedHabits));  
+        habit = 'Reading';
+        index = 'habit_3';
 
     } else if (chosenHabit.classList.contains('habit_4')) {
-        habit = 'habit_4';
-        addedHabits.push(habit);
-
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));
-        localStorage.setItem('added', JSON.stringify(addedHabits));
+        habit = 'Studying';
+        index = 'habit_4';
 
     } else if (chosenHabit.classList.contains('habit_5')) {
-        habit = 'habit_5';
-        addedHabits.push(habit);
-
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));   
-        localStorage.setItem('added', JSON.stringify(addedHabits));
+        habit = 'Eating Healthy';
+        index = 'habit_5';
 
     } else if (chosenHabit.classList.contains('habit_6')) {
-        habit = 'habit_6';
-        addedHabits.push(habit);
-
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));
-        localStorage.setItem('added', JSON.stringify(addedHabits));
+        habit = 'Go to Bed Early';
+        index = 'habit_6';
 
     } else if (chosenHabit.classList.contains('habit_7')) {
-        habit = 'habit_7';
-        addedHabits.push(habit);
-
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));  
-        localStorage.setItem('added', JSON.stringify(addedHabits));
+        habit = 'Wake up Early';
+        index = 'habit_7';
 
     } else if (chosenHabit.classList.contains('habit_8')) {
-        habit = 'habit_8';
-        addedHabits.push(habit);
-
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));
-        localStorage.setItem('added', JSON.stringify(addedHabits));
+        habit = 'No Social Media';
+        index = 'habit_8';
         
     } else if (chosenHabit.classList.contains('habit_9')) {
-        habit = 'habit_9';
-        addedHabits.push(habit);
-
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));  
-        localStorage.setItem('added', JSON.stringify(addedHabits));
+        habit = 'No Smoking';
+        index = 'habit_9';
 
     } else if (chosenHabit.classList.contains('habit_10')) {
-        habit = 'habit_10';
-        addedHabits.push(habit);
-
-        localStorage.setItem('selectedHabit', JSON.stringify(habit));
-        localStorage.setItem('added', JSON.stringify(addedHabits));
-        
-    }
+        habit = 'Meditation';
+        index = 'habit_10';
+    };
     
+    localStorage.setItem('index', JSON.stringify(index));
+    localStorage.setItem('selectedHabit', JSON.stringify(habit));
+
     window.location.href = "selectedHabitSettings.html";
 };
 
-let loadHabit = function () {
-    selectedHabit.innerHTML = 'You selected ' + habit;
-    
-}
-const goBack = function () {
-    window.history.back();
-}
-
-const retrieveLocalStorage = function () {
-    if (JSON.parse(localStorage.getItem('selectedHabit'))) { 
-        habit = JSON.parse(localStorage.getItem('selectedHabit'));
-    };
-
-}
-
 const removeSelectedHabits = function () {
 
-    if (JSON.parse(localStorage.getItem('added'))) {
-        addedHabits = JSON.parse(localStorage.getItem('added'));
+    if (JSON.parse(localStorage.getItem('habitIndex'))) {
+        habitIndex = JSON.parse(localStorage.getItem('habitIndex'));
 
-        for (let i = 0; i < addedHabits.length; i++) {
-            document.querySelector('.' + addedHabits[i]).style = 'display: none;';
-        };
-        
+        for (let i = 0; i < habitIndex.length; i++) {
+            document.querySelector('.' + habitIndex[i]).style = 'display: none;';
+        }; 
     };
-}
+};
+
 
 console.log('Application has started');
 
-retrieveLocalStorage();
-setupEventListeners();
+// retrieveLocalStorage_selectHabit();
+setupEventListeners_selectHabit();
 
-if (window.location == "file:///Users/emiliafrisell/Desktop/GitHub/habitTracker/selectedHabitSettings.html") {
-    loadHabit();
-}
-
-if (window.location == "file:///Users/emiliafrisell/Desktop/GitHub/habitTracker/select_habit.html") {
-    removeSelectedHabits();
-}
+removeSelectedHabits();
