@@ -5,15 +5,19 @@ let selectedHabit = document.querySelector('.selected');
 
 let addedHabits = [];
 let habitIndex = [];
-let done = [];
+let doneDay = [];
+let clicked = [];
+let totalClicks = 0;
 let frequency, lastHabitID, index;
 
 
-let HabitSetting = function (id, title, frequency, done) {
+let HabitSetting = function (id, title, frequency, doneDay, clicked, totalClicks) {
     this.id = id;
     this.title = title;
     this.frequency = frequency;
-    this.done = done;
+    this.doneDay = doneDay;
+    this.clicked = clicked;
+    this.totalClicks = totalClicks;
 }
 
 // HABITS
@@ -21,6 +25,13 @@ const fas = "fas";
 const training = 'fa-dumbbell';
 const takingStairs = 'fa-walking';
 const reading = 'fa-book';
+const study = 'fa-laptop-code';
+const eatHealthy = 'fa-carrot';
+const goToBedEarly = 'fa-bed';
+const wakeUpEarly = 'fa-clock';
+const lessSocialMedia = 'fa-instagram';
+const noSmoking = 'fa-smoking-ban';
+const meditation = 'fa-om';
 
 const setupEventListeners_selectedHabitSettings = function() {
 
@@ -29,11 +40,38 @@ const setupEventListeners_selectedHabitSettings = function() {
 }
 
 let loadHabit = function () {
-    
-    if (habit == 'Training'){
-        bigIcon.classList.add(fas)
-        bigIcon.classList.add(training)
-    }
+
+    if (habit == 'Training') {
+        bigIcon.classList.add(fas);
+        bigIcon.classList.add(training);
+    } else if (habit == 'Taking the Stairs') {
+        bigIcon.classList.add(fas);
+        bigIcon.classList.add(takingStairs);
+    } else if (habit == 'Reading') {
+        bigIcon.classList.add(fas);
+        bigIcon.classList.add(reading);
+    } else if (habit == 'Studying') {
+        bigIcon.classList.add(fas);
+        bigIcon.classList.add(study);
+    } else if (habit == 'Eating Healthy') {
+        bigIcon.classList.add(fas);
+        bigIcon.classList.add(eatHealthy);
+    } else if (habit == 'Go to Bed Early') {
+        bigIcon.classList.add(fas);
+        bigIcon.classList.add(goToBedEarly);
+    } else if (habit == 'Wake up Early') {
+        bigIcon.classList.add(fas);
+        bigIcon.classList.add(wakeUpEarly);
+    } else if (habit == 'No Social Media') {
+        bigIcon.classList.add('fab');
+        bigIcon.classList.add(lessSocialMedia);
+    } else if (habit == 'No Smoking') {
+        bigIcon.classList.add(fas);
+        bigIcon.classList.add(noSmoking);
+    } else if (habit == 'Meditation') {
+        bigIcon.classList.add(fas);
+        bigIcon.classList.add(meditation);
+    };
     
     selectedHabit.innerHTML = 'You selected ' + habit;  
 }
@@ -44,10 +82,12 @@ let addHabit = function () {
     frequency = document.querySelector('#frequency').value;
 
     for (let i = 0; i < 7; i++) {
-        done[i] = false;
+        doneDay[i] = false;
+        clicked[i] = 0;
     };
 
-    newHabit = new HabitSetting(lastHabitID, habit, frequency, done);
+
+    newHabit = new HabitSetting(lastHabitID, habit, frequency, doneDay, clicked, totalClicks);
     addedHabits.push(newHabit);
 
     lastHabitID++;

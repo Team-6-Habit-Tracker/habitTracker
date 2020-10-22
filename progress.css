@@ -24,6 +24,7 @@ progress {
   justify-content: center;
   color: transparent;
   background: transparent;
+
   float: left;
 }
 progress:before {
@@ -247,5 +248,5 @@ progress[value="96"]::-moz-progress-bar { background: conic-gradient(var(--progr
 progress[value="97"]::-moz-progress-bar { background: conic-gradient(var(--progress-color) 0% 97%, var(--rest-color) 97% 100%); }
 progress[value="98"]::-moz-progress-bar { background: conic-gradient(var(--progress-color) 0% 98%, var(--rest-color) 98% 100%); }
 progress[value="99"]::-moz-progress-bar { background: conic-gradient(var(--progress-color) 0% 99%, var(--rest-color) 99% 100%); }
-progress[value="100"]::-moz-progress-bar { var(--progress-color); }
+progress[value="100"]::-moz-progress-bar { background: conic-gradient(var(--progress-color) 0% 100%, var(--rest-color) 100% 100%); }
 
