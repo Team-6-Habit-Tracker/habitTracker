@@ -9,12 +9,6 @@ const wakeUpEarly = 'fa-clock';
 const noSocialMedia = 'fa-instagram';
 const noSmoking = 'fa-smoking-ban';
 const meditation = 'fa-om';
-const addedHabits = [
-    { "id": 0, "title": "No Smoking", "frequency": "1", "done": [true, false, false, false, false, false, false] },
-    { "id": 1, "title": "Studying", "frequency": "2", "done": [false, false, false, false, false, false, false] },
-    { "id": 2, "title": "Wake up Early", "frequency": "3", "done": [true, false, false, false, false, false, false] },
-    { "id": 3, "title": "No Social Media", "frequency": "4", "done": [true, false, false, false, false, false, false] }
-]
 
 let setHabits = function() {
     for (let i = 0; i < addedHabits.length; i++) {
@@ -58,5 +52,3 @@ let setHabits = function() {
         }
     }
 };
-
-setHabits();
