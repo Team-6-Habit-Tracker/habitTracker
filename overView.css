@@ -1,0 +1,85 @@
+body {
+    align-items: center;
+    display: block;
+    font-family: sans-serif;
+}
+
+.training {
+    color: #805159;
+}
+
+.takingTheStairs {
+    color: #A3C4CB;
+}
+
+.reading {
+    color: #E2C6E2;
+}
+
+.studying {
+    color: #FFE1A8;
+}
+
+.eatingHealthy {
+    color: #CED0AC;
+}
+
+.goToBedEarly {
+    color: #E16452;
+}
+
+.wakeUpEarly {
+    color: #F3A0F0;
+}
+
+.noSocialMedia {
+    color: #C89E98;
+}
+
+.noSmoking {
+    color: #B0B6D8;
+}
+
+.meditation {
+    color: #A3CBB1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+table {
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 5rem 1rem;
+}
+
+th {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.days {
+    border: solid 1px;
+    border-radius: 50%;
+    color: rgb(245, 112, 112);
+}
+
+.home {
+    position: absolute;
+    bottom: 0;
+    left: 5vh;
+}
+
+.activity {
+    position: absolute;
+    bottom: 0;
+    right: 5vh;
+    margin-top: 5vh;
+    float: right;
+    color: rgb(245, 112, 112);
+}
