@@ -16,11 +16,11 @@ body {
     color: #E2C6E2;
 }
 
-.studying {
+.study {
     color: #FFE1A8;
 }
 
-.eatingHealthy {
+.eatHealthy {
     color: #CED0AC;
 }
 
@@ -82,4 +82,8 @@ th {
     margin-top: 5vh;
     float: right;
     color: rgb(245, 112, 112);
+}
+
+.hidden {
+    display: none;
 }
