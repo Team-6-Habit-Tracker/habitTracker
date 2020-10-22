@@ -1,5 +1,4 @@
 let addedHabits, habit, lastHabitID, currentday, end;
-let myVar
 
 
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -59,13 +58,16 @@ let habitDone = function() {
                 doneHabit.id == ('title' + i)) {
                 doneHabitID = i;
 
-                addedHabits[i].done[day] = true;
+                addedHabits[i].doneDay[day] = true;
+                addedHabits[i].clicked[day] ++;
+                addedHabits[i].totalClicks ++;
 
                 localStorage.setItem('doneHabitID', JSON.stringify(doneHabitID));
                 localStorage.setItem('added', JSON.stringify(addedHabits)); // array with habit info
 
                 for (let j = 0; j < 7; j++) {
-                    if (addedHabits[i].done[j] == true) {
+                    // compare += addedHabits[i].clicked[j];
+                    if (addedHabits[i].doneDay[j] == true) {
                         compare++
                     };
                 };
@@ -74,21 +76,22 @@ let habitDone = function() {
                 send = document.querySelector('#send' + i)
                 send.value = document.querySelector('#send' + i).value;
                 animate(send)
+                // console.log(end)
 
                 if (compare == addedHabits[i].frequency) {
                     let delay = 2100 / addedHabits[i].frequency;
                     console.log(delay)
-                    setTimeout(function(){ 
-                        document.querySelector('.task_completed').classList.remove('hidden');
-                        setTimeout(function(){ 
-                            document.querySelector('.task_completed').classList.add('hidden');
-                        }, 3000);
-                        console.log('you completed your goal');
-                    }, delay);
+                    // setTimeout(function(){ 
+                    //     document.querySelector('.task_completed').classList.remove('hidden');
+                    //     setTimeout(function(){ 
+                    //         document.querySelector('.task_completed').classList.add('hidden');
+                    //     }, 3000);
+                    //     console.log('you completed your goal');
+                    // }, delay);
                     setTimeout(function(){
                         document.querySelector('#div' + i).classList.add('done');
                         document.querySelector('#check' + i).classList.remove('hidden');
-                    }, delay - 200);
+                    }, delay);
                 };
             }; 
         };
@@ -159,14 +162,14 @@ let setHabits = function() {
         // Display progress so far
         let timesCompleted = 0;
         for (let j = 0; j < 7; j++) {
-            if (addedHabits[i].done[j] == true) {
+            if (addedHabits[i].doneDay[j] == true) {
                 timesCompleted++
             };
         };
 
         let current = (100 / addedHabits[i].frequency) * timesCompleted;
         document.getElementById('send' + i).value = Math.floor(current);
-        console.log(document.getElementById('send' + i).value);
+
         if (current == 100) {
             document.querySelector('#div' + i).classList.add('done');
             document.querySelector('#check' + i).classList.remove('hidden');

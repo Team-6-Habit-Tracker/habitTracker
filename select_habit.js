@@ -6,13 +6,6 @@ let select = document.querySelectorAll('.select');
 let habitIndex = [];
 let habit, index;
 
-// HABITS
-const fas = "fas";
-const training = 'fa-dumbbell';
-const takingStairs = 'fas fa-walking';
-const reading = 'fas fa-book';
-
-
 const setupEventListeners_selectHabit = function() {
 
     selectHabitList.addEventListener('click', chooseHabit)
@@ -84,10 +77,8 @@ const removeSelectedHabits = function () {
     };
 };
 
-
 console.log('Application has started');
 
-// retrieveLocalStorage_selectHabit();
 setupEventListeners_selectHabit();
 
 removeSelectedHabits();
