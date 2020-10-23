@@ -107,73 +107,63 @@ let loadHabit = function () {
         bigIcon.classList.add(meditation);
     };
     
-    for (let i = 0; i < addedHabits.length; i++) {
-        // clicks = [];
-        if (addedHabits[i].title == habit) {
-            for (let j = 0; j < 7; j++) {
-                if (addedHabits[i].doneDay[j] == true) {
-                    compare++;
-                }
-                clicks.push(addedHabits[i].clicked[j]);
-                console.log(clicks)
-            }
-
-            if (compare < addedHabits[i].frequency){
-                let left = addedHabits[i].frequency - compare;
-                document.querySelector('#left').innerHTML = 'You need to complete the task ' + left + ' more times to reach your goal';
-            } else {
-                document.querySelector('#left').innerHTML = 'You have completed the tast ' + addedHabits[i].frequency + ' times. You have reached your GOAL!';
-            }
-
-            let end = addedHabits[i].frequency;
-            end++;
-            end++;
-            chart.options.axisY.scaleBreaks.customBreaks[0].startValue = addedHabits[i].frequency;
-            chart.options.axisY.scaleBreaks.customBreaks[0].endValue = end;
-            // chart.options.axisY.scaleBreaks.customBreaks[0].startValue = 6;
-            // chart.options.axisY.scaleBreaks.customBreaks[0].endValue = 8;
-            console.log('start: ' + chart.options.axisY.scaleBreaks.customBreaks[0].startValue)
-            console.log('end: ' + chart.options.axisY.scaleBreaks.customBreaks[0].endValue)
+    for (let j = 0; j < 7; j++) {
+        if (addedHabits[ID].doneDay[j] == true) {
+            compare++;
         }
+        clicks.push(addedHabits[ID].clicked[j]);
+        console.log('compare ' + compare)
     }
+
+    if (compare < addedHabits[ID].frequency){
+        let left = addedHabits[ID].frequency - compare;
+        document.querySelector('#left').innerHTML = 'You need to complete the task ' + left + ' more times to reach your goal';
+    } else {
+        document.querySelector('#left').innerHTML = 'You have completed the tast ' + addedHabits[ID].frequency + ' times. You have reached your GOAL!';
+    }
+
+    let end = addedHabits[ID].frequency;
+    end++;
+    end++;
+    chart.options.axisY.scaleBreaks.customBreaks[0].startValue = addedHabits[ID].frequency;
+    chart.options.axisY.scaleBreaks.customBreaks[0].endValue = end;
+    // chart.options.axisY.scaleBreaks.customBreaks[0].startValue = 6;
+    // chart.options.axisY.scaleBreaks.customBreaks[0].endValue = 8;
+    console.log('start: ' + chart.options.axisY.scaleBreaks.customBreaks[0].startValue)
+    console.log('end: ' + chart.options.axisY.scaleBreaks.customBreaks[0].endValue)
 
     // Set values for different days
     for (let i = 0; i < 7; i++) {
         chart.options.data[0].dataPoints[i].y = clicks[i]; 
-        // console.log('y: ' + chart.options.data[0].dataPoints[i].y)
-        // console.log('clicks: ' + clicks[i])
     };
-
-
-    
 
     selectedHabit.forEach(element => element.innerHTML = habit.toUpperCase());
 
 
 }
 
-let addHabit = function () {
-    let newHabit;
+// let addHabit = function () {
+//     let newHabit;
 
-    frequency = document.querySelector('#frequency').value;
+//     frequency = document.querySelector('#frequency').value;
 
-    for (let i = 0; i < 7; i++) {
-        done[i] = false;
-    };
+//     for (let i = 0; i < 7; i++) {
+//         done[i] = false;
+//     };
 
-    newHabit = new HabitSetting(lastHabitID, habit, frequency, done);
-    addedHabits.push(newHabit);
+//     newHabit = new HabitSetting(lastHabitID, habit, frequency, done);
+//     addedHabits.push(newHabit);
 
-    lastHabitID++;
-    habitIndex.push(index);
+//     lastHabitID++;
+//     habitIndex.push(index);
 
 
-    localStorage.setItem('habitIndex', JSON.stringify(habitIndex)); // array of all added habits 
-    localStorage.setItem('lastID', JSON.stringify(lastHabitID)); // amount of added habits 
-    localStorage.setItem('added', JSON.stringify(addedHabits)); // array with habit info
+//     localStorage.setItem('habitIndex', JSON.stringify(habitIndex)); // array of all added habits 
+//     localStorage.setItem('lastID', JSON.stringify(lastHabitID)); // amount of added habits 
+//     localStorage.setItem('added', JSON.stringify(addedHabits)); // array with habit info
 
-    window.location.href = "habitOverview.html"; // go to index
-}
+//     window.location.href = "habitOverview.html"; // go to index
+// }
 
 const retrieveLocalStorage_selectedHabitSettings = function () {
 
