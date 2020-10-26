@@ -192,7 +192,7 @@ let setHabits = function () {
 };
 
 function habitDelete(e) {
-  let splitID, NR, startIndex, endIndex, string, target;
+  let splitID, NR, positionOf;
 
   const deleteItem = e.target.parentNode;
 
@@ -202,53 +202,49 @@ function habitDelete(e) {
 
     splitID = deleteItem.id.split('v');
     NR = splitID[1];
-    
-    addedHabits[NR].title;
    
-//    if (addedHabits[NR].title == "Training") {
-//       habit = "Training";
-//       index = "habit_1";
-//       positionOf = habitIndex.indexOf(index);
+   if (addedHabits[NR].title == "Training") {
+      index = "habit_1";
+      positionOf = habitIndex.indexOf(index);
     
-//     } else if (addedHabits[NR].title == "Taking the Stairs") {
-//       habit = "Taking the Stairs";
-//       index = "habit_2";
-//       positionOf = habitIndex.indexOf(index);
-//     } else if (addedHabits[NR].title == "Reading") {
-//       habit = "Reading";
-//       index = "habit_3";
-//       positionOf = habitIndex.indexOf(index);
-//       console.log(positionOf); 
-//     } else if (addedHabits[NR].title == "Studying") {
-//       habit = "Studying";
-//       index = "habit_4";
-//       positionOf = habitIndex.indexOf(index);
-//     } else if (addedHabits[NR].title == "Eating Healthy") {
-//       habit = "Eating Healthy";
-//       index = "habit_5";
-//       positionOf = habitIndex.indexOf(index);
-//     } else if (addedHabits[NR].title == "Go to Bed Early") {
-//       habit = "Go to Bed Early";
-//       index = "habit_6";
-//       positionOf = habitIndex.indexOf(index);
-//     } else if (addedHabits[NR].title == "Wake up Early") {
-//       habit = "Wake up Early";
-//       index = "habit_7";
-//       positionOf = habitIndex.indexOf(index);
-//     } else if (addedHabits[NR].title == "No Social Media") {
-//       habit = "No Social Media";
-//       index = "habit_8";
-//       positionOf = habitIndex.indexOf(index);
-//     } else if (addedHabits[NR].title == "No Smoking") {
-//       habit = "No Smoking";
-//       index = "habit_9";
-//       positionOf = habitIndex.indexOf(index);
-//     } else if (addedHabits[NR].title == "Meditation") {
-//       habit = "Meditation";
-//       index = "habit_10";
-//       positionOf = habitIndex.indexOf(index);
-//     } 
+    } else if (addedHabits[NR].title == "Taking the Stairs") {
+      index = "habit_2";
+      positionOf = habitIndex.indexOf(index);
 
+    } else if (addedHabits[NR].title == "Reading") {
+      index = "habit_3";
+      positionOf = habitIndex.indexOf(index);
+
+    } else if (addedHabits[NR].title == "Studying") {
+      index = "habit_4";
+      positionOf = habitIndex.indexOf(index);
+
+    } else if (addedHabits[NR].title == "Eating Healthy") {
+      index = "habit_5";
+      positionOf = habitIndex.indexOf(index);
+
+    } else if (addedHabits[NR].title == "Go to Bed Early") {
+      index = "habit_6";
+      positionOf = habitIndex.indexOf(index);
+
+    } else if (addedHabits[NR].title == "Wake up Early") {
+      index = "habit_7";
+      positionOf = habitIndex.indexOf(index);
+
+    } else if (addedHabits[NR].title == "No Social Media") {
+      index = "habit_8";
+      positionOf = habitIndex.indexOf(index);
+
+    } else if (addedHabits[NR].title == "No Smoking") {
+      index = "habit_9";
+      positionOf = habitIndex.indexOf(index);
+
+    } else if (addedHabits[NR].title == "Meditation") {
+      index = "habit_10";
+      positionOf = habitIndex.indexOf(index);
+    }; 
+
+    habitIndex.splice(positionOf,1);
     addedHabits.splice(NR, 1)
 
     //  resets the ids of the entries so that they are in consecutive order when the page is refreshed
@@ -256,8 +252,12 @@ function habitDelete(e) {
       addedHabits[i].id = i;
    }
 
+   lastHabitID = addedHabits.length;
+
     //save the updated array to localStorage without the deleted div
     localStorage.setItem('added', JSON.stringify(addedHabits));
+    localStorage.setItem('lastID', JSON.stringify(lastHabitID));
+    localStorage.setItem('habitIndex',JSON.stringify(habitIndex));
   }
 }
 
