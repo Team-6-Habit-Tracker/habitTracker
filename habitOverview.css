@@ -61,7 +61,7 @@ h3 {
   grid-gap: 1.875rem;
 }
 
-.container div {
+.habit-item {
   z-index: 200;
 
   position: relative;
@@ -94,6 +94,20 @@ h3 {
   font-size: 2rem;
   color: black;
 }
+
+.erase {
+  position: absolute;
+  color: black;
+  top: -10px;
+  right: -4px;
+  display:none;
+}
+
+
+.wrapper:hover .erase {
+display: inline-block;
+}
+
 
 .habit-title {
   position: absolute;
