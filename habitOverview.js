@@ -209,6 +209,7 @@ function habitDelete(e) {
     for (let i = 0; i < addedHabits.length; i++) {
       addedHabits[i].id = i;
     }
+    console.log(addedHabits)
 
     // save the updated array to localStorage without the deleted div
     localStorage.setItem('added', JSON.stringify(addedHabits));
