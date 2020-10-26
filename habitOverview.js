@@ -27,6 +27,10 @@ let setupEventListeners_index = function () {
   document.querySelector('.container').addEventListener('click', habitDone);
 
   document
+    .querySelectorAll('.wrapper')
+    .forEach((element) => element.addEventListener('click', habitDelete));
+
+  document
     .querySelector('.fa-caret-left')
     .addEventListener('click', changeDayLeft);
   document
@@ -186,6 +190,30 @@ let setHabits = function () {
     }
   } // adds the habits in the order they were selected
 };
+
+function habitDelete(e) {
+  let splitID, ID, startIndex, endIndex, string, target;
+
+  const deleteItem = e.target.parentNode;
+
+  console.log(deleteItem.id);
+  if (e.target.classList.contains('erase')) {
+    deleteItem.parentNode.style = 'display: none';
+
+    splitID = deleteItem.id.split('v');
+    ID = splitID[1];
+
+    addedHabits.splice(ID, 1);
+
+    // resets the ids of the entries so that they are in consecutive order when the page is refreshed
+    for (let i = 0; i < addedHabits.length; i++) {
+      addedHabits[i].id = i;
+    }
+
+    // save the updated array to localStorage without the deleted div
+    localStorage.setItem('added', JSON.stringify(addedHabits));
+  }
+}
 
 const retrieveLocalStorage_index = function () {
   if (JSON.parse(localStorage.getItem('selectedHabit'))) {
