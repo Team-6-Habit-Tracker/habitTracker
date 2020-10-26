@@ -11,13 +11,38 @@ const noSmoking = 'fa-smoking-ban';
 const meditation = 'fa-om';
 const circle = 'fa-check-circle';
 let addedHabits = [];
+let day;
 
 const retrieveLocalStorage_overView = function () {
   if (JSON.parse(localStorage.getItem('added'))) {
     addedHabits = JSON.parse(localStorage.getItem('added'));
     setHabits();
   }
+ 
+  //if (JSON.parse(localStorage.getItem('day')))
+   //{
+    day = JSON.parse(localStorage.getItem('day'));
+    setDay();
+  //}
 };
+
+let setDay = function() {
+  if (day == 0) {
+    document.querySelector(".monday").style = "color: black";
+  } else if (day == 1) {
+    document.querySelector(".tuesday").style = "color: black";
+  } else if (day == 2) {
+    document.querySelector(".wednesday").style = "color: black";
+  } else if (day == 3) {
+    document.querySelector(".thursday").style = "color: black";
+  } else if (day == 4) {
+    document.querySelector(".friday").style = "color: black";
+  } else if (day == 5) {
+    document.querySelector(".saturday").style = "color: black";
+  } else if (day == 6) {
+    document.querySelector(".sunday").style = "color: black";
+  } 
+}
 
 let setHabits = function () {
   for (let i = 0; i < addedHabits.length; i++) {
@@ -79,37 +104,5 @@ let setHabits = function () {
     }
   }
 };
-//   let habitDone = function () {
-//     let doneHabit, doneHabitID;
-//     let compare = 0;
 
-//     doneHabit = event.target;
-
-//     if (doneHabit.id != undefined) {
-//       for (let i = 0; i < 10; i++) {
-//         if (
-//           doneHabit.id == "div" + i ||
-//           doneHabit.id == "selected" + i ||
-//           doneHabit.id == "title" + i
-//         ) {
-//           doneHabitID = i;
-
-//           addedHabits[i].doneDay[day] = true;
-//           addedHabits[i].clicked[day]++;
-//           addedHabits[i].totalClicks++;
-
-//           localStorage.setItem("doneHabitID", JSON.stringify(doneHabitID));
-//           localStorage.setItem("added", JSON.stringify(addedHabits)); // array with habit info
-
-//           for (let j = 0; j < 7; j++) {
-//             // compare += addedHabits[i].clicked[j];
-//             if (addedHabits[i].doneDay[j] == true) {
-//               compare++;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   };
-// }
 retrieveLocalStorage_overView();
