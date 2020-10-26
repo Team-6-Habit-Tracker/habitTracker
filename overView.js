@@ -26,7 +26,6 @@ let setHabits = function () {
     let icon = document.querySelector("#habit" + addedHabits[i].id);
     let title = document.querySelector("#title" + addedHabits[i].id);
 
-    
 
     tr.classList.remove("hidden");
     if (addedHabits[i].title == "Training") {
@@ -67,42 +66,45 @@ let setHabits = function () {
 
       // compare += addedHabits[i].clicked[j];
       if (addedHabits[i].doneDay[j] == true) {
-         
+        let dot = document.querySelector("#tr" + addedHabits[i].id + j);
+        dot.classList.add(circle);
+        
+        
       }
     }
   }
-
-  let habitDone = function () {
-    let doneHabit, doneHabitID;
-    let compare = 0;
-
-    doneHabit = event.target;
-
-    if (doneHabit.id != undefined) {
-      for (let i = 0; i < 10; i++) {
-        if (
-          doneHabit.id == "div" + i ||
-          doneHabit.id == "selected" + i ||
-          doneHabit.id == "title" + i
-        ) {
-          doneHabitID = i;
-
-          addedHabits[i].doneDay[day] = true;
-          addedHabits[i].clicked[day]++;
-          addedHabits[i].totalClicks++;
-
-          localStorage.setItem("doneHabitID", JSON.stringify(doneHabitID));
-          localStorage.setItem("added", JSON.stringify(addedHabits)); // array with habit info
-
-          for (let j = 0; j < 7; j++) {
-            // compare += addedHabits[i].clicked[j];
-            if (addedHabits[i].doneDay[j] == true) {
-              compare++;
-            }
-          }
-        }
-      }
-    }
-  };
 }
+//   let habitDone = function () {
+//     let doneHabit, doneHabitID;
+//     let compare = 0;
+
+//     doneHabit = event.target;
+
+//     if (doneHabit.id != undefined) {
+//       for (let i = 0; i < 10; i++) {
+//         if (
+//           doneHabit.id == "div" + i ||
+//           doneHabit.id == "selected" + i ||
+//           doneHabit.id == "title" + i
+//         ) {
+//           doneHabitID = i;
+
+//           addedHabits[i].doneDay[day] = true;
+//           addedHabits[i].clicked[day]++;
+//           addedHabits[i].totalClicks++;
+
+//           localStorage.setItem("doneHabitID", JSON.stringify(doneHabitID));
+//           localStorage.setItem("added", JSON.stringify(addedHabits)); // array with habit info
+
+//           for (let j = 0; j < 7; j++) {
+//             // compare += addedHabits[i].clicked[j];
+//             if (addedHabits[i].doneDay[j] == true) {
+//               compare++;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   };
+// }
 retrieveLocalStorage_overView();
