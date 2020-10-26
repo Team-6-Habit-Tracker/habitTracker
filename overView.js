@@ -12,7 +12,6 @@ const meditation = 'fa-om';
 const circle = 'fa-check-circle';
 let addedHabits = [];
 
-
 const retrieveLocalStorage_overView = function () {
   if (JSON.parse(localStorage.getItem('added'))) {
     addedHabits = JSON.parse(localStorage.getItem('added'));
@@ -22,40 +21,49 @@ const retrieveLocalStorage_overView = function () {
 
 let setHabits = function () {
   for (let i = 0; i < addedHabits.length; i++) {
-    let tr = document.querySelector("#tr" + addedHabits[i].id);
-    let icon = document.querySelector("#habit" + addedHabits[i].id);
-    let title = document.querySelector("#title" + addedHabits[i].id);
+    let tr = document.querySelector('#tr' + addedHabits[i].id);
+    let icon = document.querySelector('#habit' + addedHabits[i].id);
+    let title = document.querySelector('#title' + addedHabits[i].id);
 
-
-    tr.classList.remove("hidden");
-    if (addedHabits[i].title == "Training") {
+    tr.classList.remove('hidden');
+    if (addedHabits[i].title == 'Training') {
+      tr.classList.add('training');
       icon.classList.add(fas);
       icon.classList.add(training);
-    } else if (addedHabits[i].title == "Taking the Stairs") {
+    } else if (addedHabits[i].title == 'Taking the Stairs') {
+      tr.classList.add('takingTheStairs');
       icon.classList.add(fas);
       icon.classList.add(takingStairs);
-    } else if (addedHabits[i].title == "Reading") {
+    } else if (addedHabits[i].title == 'Reading') {
+      tr.classList.add('reading');
       icon.classList.add(fas);
       icon.classList.add(reading);
-    } else if (addedHabits[i].title == "Studying") {
+    } else if (addedHabits[i].title == 'Studying') {
+      tr.classList.add('study');
       icon.classList.add(fas);
       icon.classList.add(study);
-    } else if (addedHabits[i].title == "Eating Healthy") {
+    } else if (addedHabits[i].title == 'Eating Healthy') {
+      tr.classList.add('eatHealthy');
       icon.classList.add(fas);
       icon.classList.add(eatHealthy);
-    } else if (addedHabits[i].title == "Go to Bed Early") {
+    } else if (addedHabits[i].title == 'Go to Bed Early') {
+      tr.classList.add('goToBedEarly');
       icon.classList.add(fas);
       icon.classList.add(goToBedEarly);
-    } else if (addedHabits[i].title == "Wake up Early") {
+    } else if (addedHabits[i].title == 'Wake up Early') {
+      tr.classList.add('wakeUpEarly');
       icon.classList.add(fas);
       icon.classList.add(wakeUpEarly);
-    } else if (addedHabits[i].title == "No Social Media") {
-      icon.classList.add("fab");
+    } else if (addedHabits[i].title == 'No Social Media') {
+      tr.classList.add('noSocialMedia');
+      icon.classList.add('fab');
       icon.classList.add(lessSocialMedia);
-    } else if (addedHabits[i].title == "No Smoking") {
+    } else if (addedHabits[i].title == 'No Smoking') {
+      tr.classList.add('noSmoking');
       icon.classList.add(fas);
       icon.classList.add(noSmoking);
-    } else if (addedHabits[i].title == "Meditation") {
+    } else if (addedHabits[i].title == 'Meditation') {
+      tr.classList.add('meditation');
       icon.classList.add(fas);
       icon.classList.add(meditation);
     }
@@ -63,17 +71,14 @@ let setHabits = function () {
     // Matcha aktivitet med dag
     // Om aktivitet har skett visa check
     for (let j = 0; j < 7; j++) {
-
       // compare += addedHabits[i].clicked[j];
       if (addedHabits[i].doneDay[j] == true) {
-        let dot = document.querySelector("#tr" + addedHabits[i].id + j);
+        let dot = document.querySelector('#tr' + addedHabits[i].id + j);
         dot.classList.add(circle);
-        
-        
       }
     }
   }
-}
+};
 //   let habitDone = function () {
 //     let doneHabit, doneHabitID;
 //     let compare = 0;
