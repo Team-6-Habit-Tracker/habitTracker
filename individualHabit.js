@@ -1,5 +1,5 @@
 
-// selected habit settings page
+
 let bigIcon = document.querySelector('#icon');
 let selectedHabit = document.querySelectorAll('.selected');
 
@@ -32,12 +32,12 @@ const lessSocialMedia = 'fa-instagram';
 const noSmoking = 'fa-smoking-ban';
 const meditation = 'fa-om';
 
-const setupEventListeners_selectedHabitSettings = function() {
+// const setupEventListeners_individualHabit = function() {
 
   
-}
+// }
 
-var chart = new CanvasJS.Chart("chartContainer", {
+let chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2", // "light1", "light2", "dark1", "dark2"
 	title: {
@@ -69,6 +69,19 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		]
 	}]
 });
+
+let setupChart = function() {
+
+    chart.options.axisY.maximum = 10;
+    chart.options.axisY.minimum = 0;
+    chart.options.axisY.interval = 1;
+    chart.options.axisY.scaleBreaks.customBreaks.color = 'black';
+    console.log(chart.options.axisY.scaleBreaks.customBreaks.color);
+    chart.options.axisY.scaleBreaks.customBreaks.lineThinkness = 3;
+    chart.options.axisY.scaleBreaks.customBreaks.type = 'straight';
+
+    chart.render();
+}
 
 let loadHabit = function () {
     let compare = 0;
@@ -142,30 +155,7 @@ let loadHabit = function () {
 
 }
 
-// let addHabit = function () {
-//     let newHabit;
-
-//     frequency = document.querySelector('#frequency').value;
-
-//     for (let i = 0; i < 7; i++) {
-//         done[i] = false;
-//     };
-
-//     newHabit = new HabitSetting(lastHabitID, habit, frequency, done);
-//     addedHabits.push(newHabit);
-
-//     lastHabitID++;
-//     habitIndex.push(index);
-
-
-//     localStorage.setItem('habitIndex', JSON.stringify(habitIndex)); // array of all added habits 
-//     localStorage.setItem('lastID', JSON.stringify(lastHabitID)); // amount of added habits 
-//     localStorage.setItem('added', JSON.stringify(addedHabits)); // array with habit info
-
-//     window.location.href = "habitOverview.html"; // go to index
-// }
-
-const retrieveLocalStorage_selectedHabitSettings = function () {
+const retrieveLocalStorage_individualHabit = function () {
 
     if (JSON.parse(localStorage.getItem('added'))) {
         
@@ -191,18 +181,8 @@ const retrieveLocalStorage_selectedHabitSettings = function () {
 };
 
 
-retrieveLocalStorage_selectedHabitSettings();
-setupEventListeners_selectedHabitSettings();
+retrieveLocalStorage_individualHabit();
+// setupEventListeners_individualHabit();
 loadHabit();
+setupChart();
 
-
-
-chart.options.axisY.maximum = 10;
-chart.options.axisY.minimum = 0;
-chart.options.axisY.interval = 1;
-chart.options.axisY.scaleBreaks.customBreaks.color = 'black';
-console.log(chart.options.axisY.scaleBreaks.customBreaks.color);
-chart.options.axisY.scaleBreaks.customBreaks.lineThinkness = 3;
-chart.options.axisY.scaleBreaks.customBreaks.type = 'straight';
-
-chart.render();
