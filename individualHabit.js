@@ -155,7 +155,11 @@ let loadHabit = function () {
 
 }
 
+<<<<<<< Updated upstream
 const retrieveLocalStorage_individualHabit = function () {
+=======
+const retrieveLocalStorage_selectedHabitSettings = function () {
+>>>>>>> Stashed changes
 
     if (JSON.parse(localStorage.getItem('added'))) {
         
