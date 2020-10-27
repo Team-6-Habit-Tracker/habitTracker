@@ -1,7 +1,8 @@
+/* Not started with this page */
 body {
     align-items: center;
     display: block;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .training {
@@ -54,19 +55,28 @@ table {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    border-collapse: separate;
-    border-spacing: 5rem 1rem;
+    /* border-collapse: separate; */
+    border-spacing: 4rem 2.3rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* width: 100%;  */
+
 }
 
 th {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: center;
+}
+
+td {
+border: 1px solid rgb(136, 133, 133);
+
 }
 
 .days {
     border: solid 1px;
     border-radius: 50%;
-    color: rgb(245, 112, 112);
+    color: rgb(240, 184, 184);
 }
 
 .home {

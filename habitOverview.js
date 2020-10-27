@@ -133,8 +133,10 @@ function animate(node) {
 let setHabits = function () {
   for (let i = 0; i < addedHabits.length; i++) {
     let div = document.querySelector('#div' + addedHabits[i].id);
+    let send = document.querySelector('#send' + addedHabits[i].id);
     let icon = document.querySelector('#selected' + addedHabits[i].id);
     let title = document.querySelector('#title' + addedHabits[i].id);
+    let color = document.querySelector('.color' + addedHabits[i].id);
 
     div.classList.remove('hidden');
     // div.style = 'display:flex;';
@@ -144,33 +146,54 @@ let setHabits = function () {
     if (addedHabits[i].title == 'Training') {
       icon.classList.add(fas);
       icon.classList.add(training);
+      color.classList.add('bgtraining');
+      send.style = '--rest-color: #805159;';
     } else if (addedHabits[i].title == 'Taking the Stairs') {
       icon.classList.add(fas);
       icon.classList.add(takingStairs);
+      icon.classList.add(training);
+      color.classList.add('bgtakingTheStairs');
+      send.style = '--rest-color: #a3c4cb;';
     } else if (addedHabits[i].title == 'Reading') {
       icon.classList.add(fas);
       icon.classList.add(reading);
+      color.classList.add('bgreading');
+      send.style = '--rest-color: #e2c6e2;';
     } else if (addedHabits[i].title == 'Studying') {
       icon.classList.add(fas);
       icon.classList.add(study);
+      color.classList.add('bgstudy');
+      send.style = '--rest-color: #ffe1a8;';
     } else if (addedHabits[i].title == 'Eating Healthy') {
       icon.classList.add(fas);
       icon.classList.add(eatHealthy);
+      color.classList.add('bgeatHealthy');
+      send.style = '--rest-color: #ced0ac;';
     } else if (addedHabits[i].title == 'Go to Bed Early') {
       icon.classList.add(fas);
       icon.classList.add(goToBedEarly);
+      color.classList.add('bggoToBedEarly');
+      send.style = '--rest-color: #e16452;';
     } else if (addedHabits[i].title == 'Wake up Early') {
       icon.classList.add(fas);
       icon.classList.add(wakeUpEarly);
+      color.classList.add('bgwakeUpEarly');
+      send.style = '--rest-color: #f3a0f0;';
     } else if (addedHabits[i].title == 'No Social Media') {
       icon.classList.add('fab');
       icon.classList.add(lessSocialMedia);
+      color.classList.add('bgnoSocialMedia');
+      send.style = '--rest-color: #c89e98;';
     } else if (addedHabits[i].title == 'No Smoking') {
       icon.classList.add(fas);
       icon.classList.add(noSmoking);
+      color.classList.add('bgnoSmoking');
+      send.style = '--rest-color: #b0b6d8;';
     } else if (addedHabits[i].title == 'Meditation') {
       icon.classList.add(fas);
       icon.classList.add(meditation);
+      color.classList.add('bgmeditation');
+      send.style = '--rest-color: #a3cbb1;';
     }
 
     // Display progress so far
@@ -194,70 +217,60 @@ let setHabits = function () {
 function habitDelete(e) {
   let splitID, NR, positionOf;
 
-  const deleteItem = e.target.parentNode;
+  const deleteItem = e.target.parentNode.parentNode;
 
-  console.log(deleteItem.id);
   if (e.target.classList.contains('erase')) {
-    deleteItem.parentNode.style = 'display: none';
+    deleteItem.style = 'display: none';
 
     splitID = deleteItem.id.split('v');
     NR = splitID[1];
-   
-   if (addedHabits[NR].title == "Training") {
-      index = "habit_1";
-      positionOf = habitIndex.indexOf(index);
-    
-    } else if (addedHabits[NR].title == "Taking the Stairs") {
-      index = "habit_2";
-      positionOf = habitIndex.indexOf(index);
 
-    } else if (addedHabits[NR].title == "Reading") {
-      index = "habit_3";
+    if (addedHabits[NR].title == 'Training') {
+      index = 'habit_1';
       positionOf = habitIndex.indexOf(index);
-
-    } else if (addedHabits[NR].title == "Studying") {
-      index = "habit_4";
+    } else if (addedHabits[NR].title == 'Taking the Stairs') {
+      index = 'habit_2';
       positionOf = habitIndex.indexOf(index);
-
-    } else if (addedHabits[NR].title == "Eating Healthy") {
-      index = "habit_5";
+    } else if (addedHabits[NR].title == 'Reading') {
+      index = 'habit_3';
       positionOf = habitIndex.indexOf(index);
-
-    } else if (addedHabits[NR].title == "Go to Bed Early") {
-      index = "habit_6";
+    } else if (addedHabits[NR].title == 'Studying') {
+      index = 'habit_4';
       positionOf = habitIndex.indexOf(index);
-
-    } else if (addedHabits[NR].title == "Wake up Early") {
-      index = "habit_7";
+    } else if (addedHabits[NR].title == 'Eating Healthy') {
+      index = 'habit_5';
       positionOf = habitIndex.indexOf(index);
-
-    } else if (addedHabits[NR].title == "No Social Media") {
-      index = "habit_8";
+    } else if (addedHabits[NR].title == 'Go to Bed Early') {
+      index = 'habit_6';
       positionOf = habitIndex.indexOf(index);
-
-    } else if (addedHabits[NR].title == "No Smoking") {
-      index = "habit_9";
+    } else if (addedHabits[NR].title == 'Wake up Early') {
+      index = 'habit_7';
       positionOf = habitIndex.indexOf(index);
-
-    } else if (addedHabits[NR].title == "Meditation") {
-      index = "habit_10";
+    } else if (addedHabits[NR].title == 'No Social Media') {
+      index = 'habit_8';
       positionOf = habitIndex.indexOf(index);
-    }; 
+    } else if (addedHabits[NR].title == 'No Smoking') {
+      index = 'habit_9';
+      positionOf = habitIndex.indexOf(index);
+    } else if (addedHabits[NR].title == 'Meditation') {
+      index = 'habit_10';
+      positionOf = habitIndex.indexOf(index);
+    }
 
-    habitIndex.splice(positionOf,1);
-    addedHabits.splice(NR, 1)
+    habitIndex.splice(positionOf, 1);
+    addedHabits.splice(NR, 1);
 
     //  resets the ids of the entries so that they are in consecutive order when the page is refreshed
     for (let i = 0; i < addedHabits.length; i++) {
       addedHabits[i].id = i;
-   }
+    }
 
-   lastHabitID = addedHabits.length;
+    lastHabitID = addedHabits.length;
 
     //save the updated array to localStorage without the deleted div
     localStorage.setItem('added', JSON.stringify(addedHabits));
     localStorage.setItem('lastID', JSON.stringify(lastHabitID));
-    localStorage.setItem('habitIndex',JSON.stringify(habitIndex));
+    localStorage.setItem('habitIndex', JSON.stringify(habitIndex));
   }
 }
 
@@ -290,10 +303,9 @@ const retrieveLocalStorage_index = function () {
     doneHabitID = JSON.parse(localStorage.getItem('doneHabitID'));
   }
 
-   if (JSON.parse(localStorage.getItem("habitIndex"))) {
-     habitIndex = JSON.parse(localStorage.getItem("habitIndex"));
-   }
-
+  if (JSON.parse(localStorage.getItem('habitIndex'))) {
+    habitIndex = JSON.parse(localStorage.getItem('habitIndex'));
+  }
 };
 
 retrieveLocalStorage_index();

@@ -4,8 +4,8 @@
 
 
 .progress {
-  --progress-color: white;
-  --rest-color: #e26d5c;
+  --progress-color: rgb(255, 255, 255);
+  /* --rest-color: #e27777; */
   height: 129px;
   width: 129px;
   position: absolute;
@@ -29,7 +29,7 @@ progress {
 }
 progress:before {
   content: "";
-  background: var(--background, #e26d5c);
+  background: var(--background, #ffffff);
   z-index: -2;
   width: calc((var(--size) - (var(--width) * 2)) * 1px);
   height: calc((var(--size) - (var(--width) * 2)) * 1px);
