@@ -19,13 +19,14 @@ a:visited {
 a:hover {
   color: #fff;
   opacity: 0.3;
+  
 }
 
 body {
   min-height: 100vh;
   /*width: 400px;*/
-  /*background-color: #c9cba3;*/
-  background-image: linear-gradient(100deg, #a36a74, #bb737f, #dd8997);
+  /*background-color: #a1b4f1;*/
+  background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
   background-repeat: no-repeat;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
@@ -42,8 +43,12 @@ h3 {
   margin: 0 1rem;
   width: 110px;
   color: #fff;
+  
 }
 
+.fas:hover {
+  cursor: pointer;
+}
 .container h2 {
   height: 100px;
   width: 130px;
@@ -82,6 +87,9 @@ h3 {
   align-items: center;
   justify-content: center;
 }
+.habit-item:hover {
+cursor: pointer;
+}
 
 /* added to hide divs when not selected */
 .hidden {
@@ -107,10 +115,12 @@ h3 {
   top: -10px;
   right: -4px;
   display: none;
+  
 }
 
 .wrapper:hover .erase {
   display: inline-block;
+  cursor: pointer;
 }
 
 .habit-title {
@@ -129,7 +139,7 @@ h3 {
   z-index: 300;
   width: 90%;
   height: 80%;
-  background: #fff;
+  background: rgb(255, 254, 254);
   border-radius: 15px;
   padding: 2rem;
   -webkit-animation: fadeinout 1.5s linear forwards;
@@ -161,8 +171,8 @@ h3 {
 
 footer {
   position: relative;
-  bottom: 2px;
-  padding-top: 3rem;
+  bottom: 0px;
+  padding-top: 2rem;
   color: #472d30;
   display: grid;
   grid-gap: 15rem;
@@ -171,6 +181,7 @@ footer {
 
 .go-to {
   position: relative;
+  bottom: 0px;
   right: 0px;
   color: #472d30;
   font-weight: bold;

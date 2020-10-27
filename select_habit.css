@@ -18,16 +18,17 @@
 }
 
 body {
-    font-family: sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      
+
 }
 
 header {
-    background-color: yellow;
-
+    background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
     position: fixed;
     top: 0px;
     width: 100%;
-
+    color: white;
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -77,13 +78,14 @@ h2 {
 
 li {
     list-style-type: none;
+    
 }
 
 #select_habit_list li {
         line-height: 1.4;
         border-radius: 6px;
         margin: 0.5rem 0;
-        padding: 0.5rem;
+        padding: 0.9rem;
         padding-left: 0.6rem;  
 }
 
@@ -100,6 +102,7 @@ nav a:link,
 
 #select_habit_list li:hover {
     opacity: 0.5;
+    cursor: pointer;
 }
 
 #select_habit_list i {
@@ -152,15 +155,19 @@ nav a:link,
 }
 
 footer {
-    background-color: green;
+   background-image: linear-gradient(to top, #79c2cf, rgb(104, 181, 201) 33%);
 
     position: fixed;
     bottom: 0px;
     width: 100%;
-
-    padding: 0.5rem;
+    font-size: 1.25rem;
+    padding: 0.2rem 1rem;
 }
 
+.fas {
+    color: white;
+    
+}
 
 #icon {
     font-size: 5rem;

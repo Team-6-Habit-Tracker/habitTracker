@@ -1,3 +1,6 @@
+
+
+
 .training {
   color: #805159;
 }
@@ -23,7 +26,7 @@
 }
 
 .wakeUpEarly {
-  color: #f3a0f0;
+  color: #adcca3;
 }
 
 .noSocialMedia {
@@ -61,11 +64,11 @@
 }
 
 .bggoToBedEarly {
-  background-color: #e16452;
+  background-color:#5bb2c2;
 }
 
 .bgwakeUpEarly {
-  background-color: #f3a0f0;
+  background-color: #adcca3;
 }
 
 .bgnoSocialMedia {
@@ -81,4 +84,17 @@
 }
 
 /*Background color habit overview*/
-background-image: linear-gradient(100deg, #a36a74, #bb737f, #dd8997);
+/* background-image: linear-gradient(100deg, #a36a74, #bb737f, #dd8997); */
+
+
+
+/*   font-family: 'Montserrat', sans-serif; */
+
+/* To do: 
+- Overview page styling
+- Media queries for all pages 
+- Start page reveal 
+- Finishing touches
+- Style nav bar
+- Make the footer stick
+*/ 
