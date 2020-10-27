@@ -22,18 +22,18 @@
                 <th class="saturday days" scope="col">S</th>
                 <th class="sunday days" scope="col">S</th>
             </tr>
-            <tr class="training">
-                <th class=" fas fa-dumbbell"></th>
-                <td><i class="fas fa-check-circle"></i></td>
-                <td><i class="fas fa-check-circle"></i></td>
-                <td><i class="fas fa-check-circle"></i></td>
+            <tr id=tr0 class="hidden training">
+                <th id="habit0" class=" fas fa-dumbbell"></th>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td><i class="fas fa-check-circle"></i></td>
                 <td><i class="fas fa-check-circle"></i></td>
                 <td><i class="fas fa-check-circle"></i></td>
                 <td><i class="fas fa-check-circle"></i></td>
             </tr>
-            <tr class="takingTheStairs">
-                <th class=" fas fa-walking"></th>
+            <tr id="tr1" class="hidden takingTheStairs">
+                <th id="habit1" class=" fas fa-walking"></th>
                 <td></td>
                 <td><i class="fas fa-check-circle"></i></td>
                 <td><i class="fas fa-check-circle"></i></td>
@@ -42,8 +42,8 @@
                 <td><i class="fas fa-check-circle"></i></td>
                 <td><i class="fas fa-check-circle"></i></td>
             </tr>
-            <tr class="reading">
-                <th class="fas fa-book"></th>
+            <tr id="tr2" class="hidden reading">
+                <th id="habit2" class="fas fa-book"></th>
                 <td></td>
                 <td></td>
                 <td><i class="fas fa-check-circle"></i></td>
@@ -52,8 +52,8 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr class="studying">
-                <th class="fas fa-laptop-code"></th>
+            <tr id="tr3" class="hidden study">
+                <th id="habit3" class="fas fa-laptop-code"></th>
                 <td></td>
                 <td><i class="fas fa-check-circle"></i></td>
                 <td></td>
@@ -62,18 +62,8 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr class="eatingHealthy">
-                <th class=" fas fa-carrot"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="goToBedEarly">
-                <th class="fas fa-bed"></th>
+            <tr id="tr4" class="hidden eatHealthy">
+                <th id="habit4" class=" fas fa-carrot"></th>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -82,8 +72,18 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr class="wakeUpEarly">
-                <th class="far fa-clock"></th>
+            <tr id="tr5" class="hidden goToBedEarly">
+                <th id="habit5" class="fas fa-bed"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr id="tr6" class="hidden wakeUpEarly">
+                <th id="habit6" class="far fa-clock"></th>
                 <td></td>
                 <td></td>
                 <td><i class="fas fa-circle"></i></td>
@@ -92,8 +92,8 @@
                 <td></td>
                 <td><i class="fas fa-circle"></i></td>
             </tr>
-            <tr class="noSocialMedia">
-                <th class="fab fa-instagram"></th>
+            <tr id="tr7" class="hidden noSocialMedia">
+                <th id="habit7" class="fab fa-instagram"></th>
                 <td><i class="fas fa-check-circle"></i></td>
                 <td><i class="fas fa-check-circle"></i></td>
                 <td></td>
@@ -102,8 +102,8 @@
                 <td></td>
                 <td><i class="fas fa-check-circle"></i></td>
             </tr>
-            <tr class="noSmoking">
-                <th class="fas fa-smoking-ban"></th>
+            <tr id="tr8" class="hidden noSmoking">
+                <th id="habit8" class="fas fa-smoking-ban"></th>
                 <td></td>
                 <td></td>
                 <td><i class="fas fa-check-circle"></i></td>
@@ -112,8 +112,8 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr class="meditation">
-                <th class="fas fa-om"></th>
+            <tr id="tr9" class="hidden meditation">
+                <th id="habit9" class="fas fa-om"></th>
                 <td><i class="fas fa-check-circle"></i></td>
                 <td><i class="fas fa-check-circle"></i></td>
                 <td><i class="fas fa-check-circle"></i></td>
@@ -123,6 +123,8 @@
                 <td></td>
             </tr>
         </table>
+        <script src="overView.js">
+        </script>
     </main>
     <footer>
         <h2 class="home fas fa-home"></h2>
