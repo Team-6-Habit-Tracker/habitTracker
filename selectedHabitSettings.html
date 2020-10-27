@@ -1,43 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Font awesome link -->
-        <script src="https://kit.fontawesome.com/3637873e24.js" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Fonts -->
-        
-        <!-- CSS -->
-        <link type="text/css" rel="stylesheet" href="styles.css" />
-        <link type="text/css" rel="stylesheet" href="select_habit.css" />
+    <!-- Font awesome link -->
+    <script src="https://kit.fontawesome.com/3637873e24.js" crossorigin="anonymous"></script>
 
-        <title>Select Habit</title>
-    </head>
+    <!-- Fonts -->
 
-    <body>
-        <header>
-            <h2>Habit Settings</h2>
-            <nav>
-                <i class="fas fa-bars menu"></i>
-                <ul class="hidden drop-down">
-                    <a href="habitOverview.html"><li>Home</li></a>
-                    <a href="weeklyOverview.html"><li>Weekly Overview</li></a>
-                    <a href="select_habit.html"><li>Add new Habit</li></a>
-                </ul>
-            </nav>
-        </header>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link type="text/css" rel="stylesheet" href="select_habit.css" />
 
-        <main style="text-align: center;">
-            <i class="" id="icon"></i>
-            <p class="selected"></p>
+    <title>Select Habit</title>
+</head>
 
-            <label for="frequency" style="margin: 10px 0;"> <br>How often do you want to complete the habit?</label>
+<body>
+    <header>
+        <h2>Habit Settings</h2>
+        <nav>
+            <i class="fas fa-bars menu"></i>
+            <ul class="hidden drop-down">
+                <a href="habitOverview.html">
+                    <li>Home</li>
+                </a>
+                <a href="weeklyOverview.html">
+                    <li>Weekly Overview</li>
+                </a>
+                <a href="select_habit.html">
+                    <li>Add new Habit</li>
+                </a>
 
-            <br>
-            <select id="frequency" style="margin: 30px 0;">
+                <a href="">
+                    <li>Add new Habit</li>
+                </a>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main style="text-align: center;">
+        <i class="" id="icon"></i>
+        <p class="selected"></p>
+
+        <label for="frequency" style="margin: 10px 0;"> <br>How often do you want to complete the habit?</label>
+
+        <br>
+        <select id="frequency" style="margin: 30px 0;">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -46,14 +57,15 @@
                 <option value="6">6</option>
             </select>
 
-            <br>
-            <button id="add_habit">Add Habit</button>
-        </main>
-        <footer>
-            <i class="fas fa-arrow-left go_back"></i>
-        </footer>
+        <br>
+        <button id="add_habit">Add Habit</button>
+    </main>
+    <footer>
+        <i class="fas fa-arrow-left go_back"></i>
+    </footer>
 
-        <script src="selectedHabitSettings.js"></script>
-        <script src="common.js"></script>
-    </body>
+    <script src="selectedHabitSettings.js"></script>
+    <script src="common.js"></script>
+</body>
+
 </html>
