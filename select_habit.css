@@ -23,11 +23,9 @@ body {
 
 header {
     background-color: yellow;
-
     position: fixed;
     top: 0px;
     width: 100%;
-
     padding: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -40,6 +38,7 @@ header {
 .menu {
     font-size: 1.2rem;
 }
+
 .menu:hover .hidden {
     display: inline-block;
 }
@@ -48,28 +47,26 @@ header {
     position: absolute;
     right: 0px;
     top: 45px;
-
     height: 130px;
     width: 300px;
-
     font-size: 1.2rem;
     background-color: whitesmoke;
     border-radius: 5px;
     padding: 15px;
-    
 }
 
 .drop-down li {
     padding-bottom: 5px;
 }
+
 main {
     margin-top: 50px;
 }
 
 h2 {
     padding-left: 10%;
-
 }
+
 #select_habit_list {
     margin-left: 1rem;
     font-size: 1.2rem;
@@ -80,11 +77,11 @@ li {
 }
 
 #select_habit_list li {
-        line-height: 1.4;
-        border-radius: 6px;
-        margin: 0.5rem 0;
-        padding: 0.5rem;
-        padding-left: 0.6rem;  
+    line-height: 1.4;
+    border-radius: 6px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    padding-left: 0.6rem;
 }
 
 nav a:active,
@@ -97,7 +94,6 @@ nav a:link,
     text-decoration: none;
 }
 
-
 #select_habit_list li:hover {
     opacity: 0.5;
 }
@@ -106,7 +102,6 @@ nav a:link,
     padding-right: 2em;
     align-self: center;
     width: 40px;
-
 }
 
 .habit_1 i {
@@ -117,7 +112,6 @@ nav a:link,
     color: var(--habit_2-color);
 }
 
-
 .habit_3 i {
     color: var(--habit_3-color);
 }
@@ -125,7 +119,6 @@ nav a:link,
 .habit_4 i {
     color: var(--habit_4-color);
 }
-
 
 .habit_5 i {
     color: var(--habit_5-color);
@@ -153,14 +146,11 @@ nav a:link,
 
 footer {
     background-color: green;
-
     position: fixed;
     bottom: 0px;
     width: 100%;
-
     padding: 0.5rem;
 }
-
 
 #icon {
     font-size: 5rem;
@@ -175,15 +165,19 @@ footer {
     font-size: 1.5rem;
 }
 
+.testClass {
+    font-weight: 900;
+}
 
 @media only screen and (min-width: 500px) {
-
     body {
         width: 400px;
         margin: 0 auto;
     }
-
-    header, footer {
+    header,
+    footer {
         width: 400px;
     }
-};
+}
+
+;
