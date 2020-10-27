@@ -23,8 +23,9 @@
     <h3 id="day" style="display: inline"></h3>
     <i class="fas fa-caret-right"></i>
     <div class="container">
-      <div class="wrapper icon0">
-        <div class="hidden habit-item icon0" id="div0">
+
+      <div class="hidden wrapper">
+        <div class="habit-item" id="div0">
           <progress class="progress" id="send0" value="0" max="100"></progress>
           <!-- we should probably add alts here for accessibility or alt="" to skip -->
           <h2 class="color0"><i class="fa-3x" id="selected0"> </i></h2>
@@ -34,8 +35,8 @@
         </div>
       </div>
 
-      <div class="wrapper icon1">
-        <div class="hidden habit-item" id="div1">
+      <div class="hidden wrapper" id="div1">
+        <div class="habit-item">
           <progress class="progress" id="send1" value="0" max="100"></progress>
           <h2 class="color1"><i class="fa-3x " id="selected1"></i></h2>
           <p class="habit-title" id="title1"></p>
@@ -44,8 +45,8 @@
         </div>
       </div>
 
-      <div class="wrapper">
-        <div class="hidden habit-item" id="div2">
+      <div class="hidden wrapper" id="div2">
+        <div class="habit-item">
           <progress class="progress" id="send2" value="10" max="100"></progress>
           <h2 class="color2"><i class="fa-3x" id="selected2"></i></h2>
           <p class="habit-title" id="title2"></p>
@@ -54,8 +55,8 @@
         </div>
       </div>
 
-      <div class="wrapper">
-        <div class="hidden habit-item" id="div3">
+      <div class="hidden wrapper" id="div3">
+        <div class="habit-item">
           <progress class="progress" id="send3" value="10" max="100"></progress>
           <h2 class="color3"><i class="fa-3x" id="selected3"></i></h2>
           <p class="habit-title" id="title3"></p>
@@ -64,8 +65,8 @@
         </div>
       </div>
 
-      <div class="wrapper">
-        <div class="hidden habit-item" id="div4">
+      <div class="hidden wrapper" id="div4">
+        <div class="habit-item">
           <progress class="progress" id="send4" value="10" max="100"></progress>
           <h2 class="color4"><i class="fa-3x" id="selected4"></i></h2>
           <p class="habit-title" id="title4"></p>
@@ -74,8 +75,8 @@
         </div>
       </div>
 
-      <div class="wrapper">
-        <div class="hidden habit-item" id="div5">
+      <div class="hidden wrapper" id="div5">
+        <div class="habit-item">
           <progress class="progress" id="send5" value="10" max="100"></progress>
           <h2 class="color5"><i class="fa-3x" id="selected5"></i></h2>
           <p class="habit-title" id="title5"></p>
@@ -84,8 +85,8 @@
         </div>
       </div>
 
-      <div class="wrapper">
-        <div class="hidden habit-item" id="div6">
+      <div class="hidden wrapper" id="div6">
+        <div class="habit-item">
           <progress class="progress" id="send6" value="10" max="100"></progress>
           <h2 class="color6"><i class="fa-3x" id="selected6"> </i></h2>
           <p class="habit-title" id="title6"></p>
@@ -94,8 +95,8 @@
         </div>
       </div>
 
-      <div class="wrapper">
-        <div class="hidden habit-item" id="div7">
+      <div class="hidden wrapper" id="div7">
+        <div class="habit-item">
           <progress class="progress" id="send7" value="10" max="100"></progress>
           <h2 class="color7"><i class="fa-3x" id="selected7"></i></h2>
           <p class="habit-title" id="title7"></p>
@@ -104,8 +105,8 @@
         </div>
       </div>
 
-      <div class="wrapper">
-        <div class="hidden habit-item" id="div8">
+      <div class="hidden wrapper" id="div8">
+        <div class="habit-item">
           <progress class="progress" id="send8" value="10" max="100"></progress>
           <h2 class="color8"><i class="fa-3x" id="selected8"></i></h2>
           <p class="habit-title" id="title8"></p>
@@ -114,8 +115,8 @@
         </div>
       </div>
 
-      <div class="wrapper">
-        <div class="hidden habit-item" id="div9">
+      <div class="hidden wrapper" id="div9">
+        <div class="habit-item">
           <progress class="progress" id="send9" value="10" max="100"></progress>
           <h2 class="color9"><i class="fa-3x" id="selected9"></i></h2>
           <p class="habit-title" id="title9"></p>
@@ -123,6 +124,13 @@
           <i class="fas fa-times erase" id="erase9"></i>
         </div>
       </div>
+
+      <div class="habit-item" id="addCircle">
+        <!-- <progress class="progress" id="send9" value="10" max="100"></progress> -->
+        <a href="./select_habit.html"><h2><i class="fa-3x fas fa-plus-circle"></i></h2>
+        <p class="habit-title">Add New Habit</p></a>
+      </div>
+
     </div>
 
     <div class="task_completed hidden">You reached your goal!</div>
@@ -131,7 +139,6 @@
       <a href="select_habit.html">
         <i class="plus fas fa-plus-circle fa-1x"></i>
       </a>
-
       <p class="go-to"><a href="overView.html">Weekly Report</a></p>
     </footer>
 

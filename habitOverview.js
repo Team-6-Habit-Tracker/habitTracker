@@ -137,7 +137,7 @@ let setHabits = function () {
     let title = document.querySelector('#title' + addedHabits[i].id);
 
     div.classList.remove('hidden');
-    div.style = 'display:flex;';
+    // div.style = 'display:flex;';
 
     title.innerHTML = addedHabits[i].title;
 

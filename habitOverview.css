@@ -72,6 +72,7 @@ h3 {
   border-radius: 100%;
   box-shadow: -2px 3px 3px rgba(0, 0, 0, 0.3);
 
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -175,9 +176,24 @@ footer {
   font-size: 0.7rem;
   padding-right: 15px;
 }
+#addCircle a:active, #addCircle a:visited, #addCircle a:link{
+text-decoration: none;
+color: gray;
 
+}
 
+#addCircle h2 {
+  background-color: white;
+}
 
+#addCircle {
+  opacity: 0.4;
+  background-color: white;
+}
+
+#addCircle:hover {
+  opacity: 0.6;
+}
 /*used the same as Emilia here*/
 
 @media only screen and (min-width: 500px) {
