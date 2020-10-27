@@ -194,12 +194,13 @@ let setHabits = function () {
 function habitDelete(e) {
   let splitID, NR, positionOf;
 
-  const deleteItem = e.target.parentNode;
+  const deleteItem = e.target.parentNode.parentNode;
 
   console.log(deleteItem.id);
   if (e.target.classList.contains('erase')) {
-    deleteItem.parentNode.style = 'display: none';
+    deleteItem.style = 'display: none';
 
+    console.log(deleteItem)
     splitID = deleteItem.id.split('v');
     NR = splitID[1];
    
