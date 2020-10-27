@@ -18,6 +18,7 @@ const meditation = 'fa-om';
 
 let setupEventListeners_index = function() {
     document.querySelector('.container').addEventListener('click', habitDone);
+    document.querySelector('.container').addEventListener('dblclick', goToIndividualHabit);
 
     document.querySelector('.fa-caret-left').addEventListener('click', changeDayLeft);
     document.querySelector('.fa-caret-right').addEventListener('click', changeDayRight);
@@ -51,11 +52,14 @@ let habitDone = function() {
 
     doneHabit = event.target;
 
+    console.log(doneHabit.id)
+    // I think we can take away the for loop here. donehabit.id should be able to replace i maybe
     if(doneHabit.id != undefined){
         for (let i = 0; i < 10; i++) {
             if (doneHabit.id == ('div' + i) || 
                 doneHabit.id == ('selected' + i) || 
-                doneHabit.id == ('title' + i)) {
+                doneHabit.id == ('title' + i) ||
+                doneHabit.id == ('send' + i)) {
                 doneHabitID = i;
 
                 addedHabits[i].doneDay[day] = true;
@@ -113,6 +117,28 @@ function animate(node) {
     });
 }
 
+let goToIndividualHabit = function() {
+    console.log('double click')
+    let clickedHabit;
+
+    clickedHabit = event.target;
+
+    if(clickedHabit.id != undefined){
+        for (let i = 0; i < 10; i++) {
+            if (clickedHabit.id == ('div' + i) || 
+                clickedHabit.id == ('selected' + i) || 
+                clickedHabit.id == ('title' + i)) {
+                doneHabitID = i;
+            }
+        }
+    }
+
+    localStorage.setItem('doneHabitID', JSON.stringify(doneHabitID));
+    localStorage.setItem('added', JSON.stringify(addedHabits)); // array with habit info
+
+    window.location.href = "individualHabit.html"; // go to index
+}
+    
 
 let setHabits = function() {
     
@@ -211,4 +237,3 @@ const retrieveLocalStorage_index = function () {
 
 retrieveLocalStorage_index();
 setupEventListeners_index();
-

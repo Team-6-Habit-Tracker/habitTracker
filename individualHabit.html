@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font awesome link -->
+    <script src="https://kit.fontawesome.com/3637873e24.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link type="text/css" rel="stylesheet" href="select_habit.css" />
+
+    <title>Select Habit</title>
+</head>
+
+<body>
+    <header>
+        <h2 class="selected"></h2>
+        <nav>
+            <i class="fas fa-bars menu"></i>
+            <ul class="hidden drop-down">
+                <a href="habitOverview.html">
+                    <li>Home</li>
+                </a>
+                <a href="weeklyOverview.html">
+                    <li>Weekly Overview</li>
+                </a>
+                <a href="select_habit.html">
+                    <li>Add new Habit</li>
+                </a>
+                <a href=""> </ul>
+        </nav>
+    </header>
+
+    <main style="text-align: center; padding: 0 1rem;">
+        <i class="" id="icon"></i>
+        <p class="selected"></p>
+
+
+
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+        <br>
+        <p id="left" style="margin-bottom: 3rem;"></p>
+
+    </main>
+    <footer>
+        <i class="fas fa-arrow-left go_back"></i>
+    </footer>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="individualHabit.js"></script>
+    <script src="common.js"></script>
+</body>
+
+</html>
