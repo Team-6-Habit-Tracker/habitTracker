@@ -9,10 +9,13 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="progress.css" />
     <link type="text/css" rel="stylesheet" href="habitOverview.css" />
     <link rel="stylesheet" href="habitOverview.css" />
+        <link rel="stylesheet" href="color.css" />
+
 
     <title>Habit Overview</title>
   </head>
@@ -24,11 +27,11 @@
     <i class="fas fa-caret-right"></i>
     <div class="container">
 
-      <div class="hidden wrapper">
-        <div class="habit-item" id="div0">
+      <div class="hidden wrapper" id="div0">
+        <div class="habit-item">
           <progress class="progress" id="send0" value="0" max="100"></progress>
           <!-- we should probably add alts here for accessibility or alt="" to skip -->
-          <h2 class="color0"><i class="fa-3x" id="selected0"> </i></h2>
+          <h2 class="color0"> <i class="fa-3x" id="selected0"> </i></h2>
           <p class="habit-title" id="title0"></p>
           <i class="far fa-check-circle check hidden" id="check0"></i>
           <i class="fas fa-times erase" id="erase0"></i>
@@ -139,7 +142,7 @@
       <a href="select_habit.html">
         <i class="plus fas fa-plus-circle fa-1x"></i>
       </a>
-      <p class="go-to"><a href="overView.html">Weekly Report</a></p>
+      <p class="go-to"><a href="overView.html"><i class="far fa-calender-alt"></i>Weekly Report</a></p>
     </footer>
 
     <script src="habitOverview.js"></script>
