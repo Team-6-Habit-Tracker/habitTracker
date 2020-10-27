@@ -1,4 +1,3 @@
-
 // select habit page
 let selectHabitList = document.querySelector('#select_habit_list');
 let select = document.querySelectorAll('.select');
@@ -9,10 +8,10 @@ let habit, index;
 const setupEventListeners_selectHabit = function() {
 
     selectHabitList.addEventListener('click', chooseHabit)
-    
+
 };
 
-let chooseHabit = function (event) {
+let chooseHabit = function(event) {
     let chosenHabit;
 
     chosenHabit = event.target; // li where the mouse was pressed
@@ -50,7 +49,7 @@ let chooseHabit = function (event) {
     } else if (chosenHabit.classList.contains('habit_8')) {
         habit = 'No Social Media';
         index = 'habit_8';
-        
+
     } else if (chosenHabit.classList.contains('habit_9')) {
         habit = 'No Smoking';
         index = 'habit_9';
@@ -59,21 +58,21 @@ let chooseHabit = function (event) {
         habit = 'Meditation';
         index = 'habit_10';
     };
-    
+
     localStorage.setItem('index', JSON.stringify(index));
     localStorage.setItem('selectedHabit', JSON.stringify(habit));
 
-    window.location.href = "selectedHabitSettings.html";
+    window.location.href = "selecthabitsettings.html";
 };
 
-const removeSelectedHabits = function () {
+const removeSelectedHabits = function() {
 
     if (JSON.parse(localStorage.getItem('habitIndex'))) {
         habitIndex = JSON.parse(localStorage.getItem('habitIndex'));
 
         for (let i = 0; i < habitIndex.length; i++) {
             document.querySelector('.' + habitIndex[i]).style = 'display: none;';
-        }; 
+        };
     };
 };
 
