@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   /*width: 400px;*/
   /*background-color: #c9cba3;*/
-  background-image: linear-gradient(189deg, #fff, #e7adc8);
+  background-image: linear-gradient(100deg, #a36a74, #bb737f, #dd8997);
   background-repeat: no-repeat;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
@@ -33,7 +33,7 @@ body {
 }
 
 .overview-title {
-  color: #472d30;
+  color: #fff;
   font-size: 1rem;
   padding-bottom: 2rem;
 }
@@ -41,17 +41,16 @@ body {
 h3 {
   margin: 0 1rem;
   width: 110px;
-  
+  color: #fff;
 }
 
 .container h2 {
-
   height: 100px;
   width: 130px;
   border-radius: 100%;
   text-align: center;
   max-width: 100px;
- /*background-color: #e26d5c;*/
+  /*background-color: #e26d5c;*/
 }
 
 .container i {
@@ -78,13 +77,11 @@ h3 {
   border-radius: 100%;
   box-shadow: -2px 3px 3px rgba(0, 0, 0, 0.3);
 
- display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
-
-
 
 /* added to hide divs when not selected */
 .hidden {
@@ -109,14 +106,12 @@ h3 {
   color: black;
   top: -10px;
   right: -4px;
-  display:none;
+  display: none;
 }
-
 
 .wrapper:hover .erase {
-display: inline-block;
+  display: inline-block;
 }
-
 
 .habit-title {
   position: absolute;
@@ -127,8 +122,6 @@ display: inline-block;
   top: 135px;
 }
 
-
-
 /* When you completed a task */
 .task_completed {
   position: absolute;
@@ -136,7 +129,7 @@ display: inline-block;
   z-index: 300;
   width: 90%;
   height: 80%;
-  background: red;
+  background: #fff;
   border-radius: 15px;
   padding: 2rem;
   -webkit-animation: fadeinout 1.5s linear forwards;
@@ -168,26 +161,28 @@ display: inline-block;
 
 footer {
   position: relative;
-  bottom: 0px;
-  padding-top: 2rem;
+  bottom: 2px;
+  padding-top: 3rem;
   color: #472d30;
   display: grid;
+  grid-gap: 15rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .go-to {
-  position: absolute;
-  bottom: 0px;
+  position: relative;
   right: 0px;
   color: #472d30;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 1rem;
   padding-right: 15px;
 }
-#addCircle a:active, #addCircle a:visited, #addCircle a:link{
-text-decoration: none;
-color: gray;
 
+#addCircle a:active,
+#addCircle a:visited,
+#addCircle a:link {
+  text-decoration: none;
+  color: gray;
 }
 
 #addCircle h2 {

@@ -9,29 +9,30 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
 
     <link type="text/css" rel="stylesheet" href="progress.css" />
     <link type="text/css" rel="stylesheet" href="habitOverview.css" />
     <link rel="stylesheet" href="habitOverview.css" />
-        <link rel="stylesheet" href="color.css" />
-
+    <link rel="stylesheet" href="color.css" />
 
     <title>Habit Overview</title>
   </head>
   <body>
-    <h2 class="overview-title">Habit Tracker</h2>
+    <h2 class="overview-title"></h2>
 
     <i class="fas fa-caret-left"></i>
     <h3 id="day" style="display: inline"></h3>
     <i class="fas fa-caret-right"></i>
     <div class="container">
-
       <div class="hidden wrapper" id="div0">
         <div class="habit-item">
           <progress class="progress" id="send0" value="0" max="100"></progress>
           <!-- we should probably add alts here for accessibility or alt="" to skip -->
-          <h2 class="color0"> <i class="fa-3x" id="selected0"> </i></h2>
+          <h2 class="color0"><i class="fa-3x" id="selected0"> </i></h2>
           <p class="habit-title" id="title0"></p>
           <i class="far fa-check-circle check hidden" id="check0"></i>
           <i class="fas fa-times erase" id="erase0"></i>
@@ -41,7 +42,7 @@
       <div class="hidden wrapper" id="div1">
         <div class="habit-item">
           <progress class="progress" id="send1" value="0" max="100"></progress>
-          <h2 class="color1"><i class="fa-3x " id="selected1"></i></h2>
+          <h2 class="color1"><i class="fa-3x" id="selected1"></i></h2>
           <p class="habit-title" id="title1"></p>
           <i class="far fa-check-circle check hidden" id="check1"></i>
           <i class="fas fa-times erase" id="erase1"></i>
@@ -130,10 +131,11 @@
 
       <div class="habit-item" id="addCircle">
         <!-- <progress class="progress" id="send9" value="10" max="100"></progress> -->
-        <a href="./select_habit.html"><h2><i class="fa-3x fas fa-plus-circle"></i></h2>
-        <p class="habit-title">Add New Habit</p></a>
+        <a href="./select_habit.html"
+          ><h2><i class="fa-3x fas fa-plus-circle"></i></h2>
+          <p class="habit-title">Add New Habit</p></a
+        >
       </div>
-
     </div>
 
     <div class="task_completed hidden">You reached your goal!</div>
@@ -142,7 +144,11 @@
       <a href="select_habit.html">
         <i class="plus fas fa-plus-circle fa-1x"></i>
       </a>
-      <p class="go-to"><a href="overView.html"><i class="far fa-calender-alt"></i>Weekly Report</a></p>
+      <p class="go-to">
+        <a href="overView.html"
+          ><i class="calendar far fa-calendar-alt"></i>
+        </a>
+      </p>
     </footer>
 
     <script src="habitOverview.js"></script>

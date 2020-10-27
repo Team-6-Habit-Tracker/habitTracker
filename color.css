@@ -1,4 +1,3 @@
-
 .training {
   color: #805159;
 }
@@ -46,7 +45,7 @@
 }
 
 .bgtakingTheStairs {
-   background-color: #a3c4cb;
+  background-color: #a3c4cb;
 }
 
 .bgreading {
@@ -54,7 +53,7 @@
 }
 
 .bgstudy {
-  background-color:#ffe1a8;
+  background-color: #ffe1a8;
 }
 
 .bgeatHealthy {
@@ -78,7 +77,8 @@
 }
 
 .bgmeditation {
- background-color: #a3cbb1;
+  background-color: #a3cbb1;
 }
 
-
+/*Background color habit overview*/
+background-image: linear-gradient(100deg, #a36a74, #bb737f, #dd8997);
