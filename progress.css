@@ -29,7 +29,7 @@ progress {
 }
 progress:before {
   content: "";
-  background: var(--background, #e26d5c);
+  /* background: var(--background, #e26d5c); */
   z-index: -2;
   width: calc((var(--size) - (var(--width) * 2)) * 1px);
   height: calc((var(--size) - (var(--width) * 2)) * 1px);

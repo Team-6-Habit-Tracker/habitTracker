@@ -22,7 +22,7 @@ body {
 }
 
 header {
-    background-color: yellow;
+    /* background-color: yellow; */
 
     position: fixed;
     top: 0px;
