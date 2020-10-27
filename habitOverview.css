@@ -118,6 +118,8 @@ display: inline-block;
   top: 135px;
 }
 
+
+
 /* When you completed a task */
 .task_completed {
   position: absolute;
@@ -173,6 +175,8 @@ footer {
   font-size: 0.7rem;
   padding-right: 15px;
 }
+
+
 
 /*used the same as Emilia here*/
 
