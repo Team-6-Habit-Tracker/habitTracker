@@ -22,11 +22,11 @@
 }
 
 .goToBedEarly {
-  color: #e16452;
+  color: #5bb2c2;
 }
 
 .wakeUpEarly {
-  color: #adcca3;
+  color: #bf6394;
 }
 
 .noSocialMedia {
@@ -68,7 +68,7 @@
 }
 
 .bgwakeUpEarly {
-  background-color: #adcca3;
+  background-color: #bf6394;
 }
 
 .bgnoSocialMedia {
@@ -82,6 +82,50 @@
 .bgmeditation {
   background-color: #a3cbb1;
 }
+
+
+/* Header and footer for every page*/
+
+/* header { */
+    /* background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997); */
+    /* position: fixed; */
+    /* top: 0px; */
+    /* width: 100%; */
+    /* color: white; */
+    /* padding: 0.5rem; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+/* } */
+/*  */
+/* .hidden { */
+    /* display: none; */
+/* } */
+/*  */
+/* .menu { */
+    /* font-size: 1.2rem; */
+/* } */
+/* .menu:hover .hidden { */
+    /* display: inline-block; */
+/* } */
+/*  */
+/* .drop-down { */
+    /* position: absolute; */
+    /* right: 0px; */
+    /* top: 45px; */
+/*  */
+    /* height: 130px; */
+    /* width: 300px; */
+/*  */
+    /* font-size: 1.2rem; */
+    /* background-color: whitesmoke; */
+    /* border-radius: 5px; */
+    /* padding: 15px; */
+/*      */
+/* } */
+/*  */
+/* .drop-down li { */
+    /* padding-bottom: 5px; */
+/* } */
 
 /*Background color habit overview*/
 /* background-image: linear-gradient(100deg, #a36a74, #bb737f, #dd8997); */
