@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <h2>Habit Settings</h2>
+        <h2 class="selected"></h2>
         <nav>
             <i class="fas fa-bars menu"></i>
             <ul class="hidden drop-down">
@@ -33,38 +33,48 @@
                     <li>Add new Habit</li>
                 </a>
 
-                <a href="">
-                    <li>Add new Habit</li>
-                </a>
+                <li id=rafe0></li>
+
+                <li id=rafe1></li>
+
+                <li id=rafe2></li>
+
+                <li id=rafe3></li>
+
+                <li id=rafe4></li>
+
+                <li id=rafe5></li>
+
+                <li id=rafe6></li>
+
+                <li id=rafe7></li>
+
+                <li id=rafe8></li>
+
+                <li id=rafe9></li>
             </ul>
 
         </nav>
     </header>
 
-    <main style="text-align: center;">
+    <main style="text-align: center; padding: 0 1rem;">
         <i class="" id="icon"></i>
         <p class="selected"></p>
 
-        <label for="frequency" style="margin: 10px 0;"> <br>How often do you want to complete the habit?</label>
+
+
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 
         <br>
-        <select id="frequency" style="margin: 30px 0;">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-            </select>
+        <p id="left" style="margin-bottom: 3rem;"></p>
 
-        <br>
-        <button id="add_habit">Add Habit</button>
     </main>
     <footer>
         <i class="fas fa-arrow-left go_back"></i>
     </footer>
 
-    <script src="selectedHabitSettings.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="individualHabit.js"></script>
     <script src="common.js"></script>
 </body>
 

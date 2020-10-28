@@ -1,0 +1,100 @@
+
+
+
+.training {
+  color: #805159;
+}
+
+.takingTheStairs {
+  color: #a3c4cb;
+}
+
+.reading {
+  color: #e2c6e2;
+}
+
+.study {
+  color: #ffe1a8;
+}
+
+.eatHealthy {
+  color: #ced0ac;
+}
+
+.goToBedEarly {
+  color: #e16452;
+}
+
+.wakeUpEarly {
+  color: #adcca3;
+}
+
+.noSocialMedia {
+  color: #c89e98;
+}
+
+.noSmoking {
+  color: #b0b6d8;
+}
+
+.meditation {
+  color: #a3cbb1;
+}
+
+/* Background color for icons*/
+
+.bgtraining {
+  background-color: #805159;
+}
+
+.bgtakingTheStairs {
+  background-color: #a3c4cb;
+}
+
+.bgreading {
+  background-color: #e2c6e2;
+}
+
+.bgstudy {
+  background-color: #ffe1a8;
+}
+
+.bgeatHealthy {
+  background-color: #ced0ac;
+}
+
+.bggoToBedEarly {
+  background-color:#5bb2c2;
+}
+
+.bgwakeUpEarly {
+  background-color: #adcca3;
+}
+
+.bgnoSocialMedia {
+  background-color: #c89e98;
+}
+
+.bgnoSmoking {
+  background-color: #b0b6d8;
+}
+
+.bgmeditation {
+  background-color: #a3cbb1;
+}
+
+/*Background color habit overview*/
+/* background-image: linear-gradient(100deg, #a36a74, #bb737f, #dd8997); */
+
+
+
+/*   font-family: 'Montserrat', sans-serif; */
+
+/* To do: 
+- Overview page styling
+- Media queries for all pages 
+- Start page reveal 
+- Finishing touches
+- Style nav bar
+- Make the footer stick
+*/ 

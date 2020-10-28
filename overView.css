@@ -1,88 +1,129 @@
+/* Not started with this page */
 body {
-  align-items: center;
-  display: block;
-  font-family: sans-serif;
+    align-items: center;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .training {
-  color: #805159;
+    color: #805159;
 }
 
 .takingTheStairs {
-  color: #a3c4cb;
+    color: #a3c4cb;
 }
 
 .reading {
-  color: #e2c6e2;
+    color: #e2c6e2;
 }
 
 .study {
-  color: #ffe1a8;
+    color: #ffe1a8;
 }
 
 .eatHealthy {
-  color: #ced0ac;
+    color: #ced0ac;
 }
 
 .goToBedEarly {
-  color: #e16452;
+    color: #e16452;
 }
 
 .wakeUpEarly {
-  color: #f3a0f0;
+    color: #f3a0f0;
 }
 
 .noSocialMedia {
-  color: #c89e98;
+    color: #c89e98;
 }
 
 .noSmoking {
-  color: #b0b6d8;
+    color: #b0b6d8;
 }
 
 .meditation {
-  color: #a3cbb1;
+    color: #a3cbb1;
 }
 
 h1 {
-  text-align: center;
-  font-size: 2rem;
+    text-align: center;
+    font-size: 2rem;
 }
 
 table {
-  width: 90%;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: separate;
-  border-spacing: 5rem 1rem;
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    /* border-collapse: separate; */
+    border-spacing: 4rem 2.3rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* width: 100%;  */
+
 }
 
 th {
-  font-size: 1.5rem;
-  text-align: center;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+td {
+border: 1px solid rgb(136, 133, 133);
+
 }
 
 .days {
-  border: solid 1px;
-  border-radius: 50%;
-  color: rgb(245, 112, 112);
+    border: solid 1px;
+    border-radius: 50%;
+    color: rgb(240, 184, 184);
 }
 
 .home {
-  position: absolute;
-  bottom: 0;
-  left: 5vh;
+    position: absolute;
+    bottom: 0;
+    left: 5vh;
 }
 
 .activity {
-  position: absolute;
-  bottom: 0;
-  right: 5vh;
-  margin-top: 5vh;
-  float: right;
-  color: rgb(245, 112, 112);
+    position: absolute;
+    bottom: 0;
+    right: 5vh;
+    margin-top: 5vh;
+    float: right;
 }
+
+a:active,
+a:visited,
+a:link {
+    color: gray;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+
+/* 
+#addCircle a:active, #addCircle a:visited, #addCircle a:link{
+  text-decoration: none;
+  color: gray;
+  
+  }
+  
+  #addCircle h2 {
+    background-color: white;
+  }
+  
+  #addCircle {
+    opacity: 0.4;
+    background-color: white;
+  }
+  
+  #addCircle:hover {
+    opacity: 0.6;
+  } */
+
 
 /*.hidden {
     display: none;
