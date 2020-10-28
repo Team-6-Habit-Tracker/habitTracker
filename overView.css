@@ -5,63 +5,19 @@
 }
 
 body {
+    width: 400px;
     font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
 }
 
-header {
-    background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997); 
-    position: relative;
-    top: 0px;
-    width: 100%; 
-    color: white;
-    padding: 1rem;
-    display: inline-block;
-    /* justify-content: space-between; */
-}
 
 h1 {
     display: inline-block;
-    font-size: 1.5rem;
-    
-}
-
-
-nav {
-    display: inline-block;
-    
-
-    
+    font-size: 1.2rem;
 }
 
 .hidden {
     display: none;
-}
-
-.menu {
-    font-size: 2rem;
-    left: 70rem;
-    cursor: pointer;  
-    position: relative;
-}
-
-.menu:hover .hidden {
-    display: inline-block;
-}
-
-.drop-down {
-    position: absolute;
-    right: 0px;
-    top: 45px;
-    height: 130px;
-    width: 300px;
-    font-size: 1.2rem;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    padding: 15px;  
-}
-
-.drop-down li {
-    padding-bottom: 5px;
 }
 
 .training {
@@ -109,14 +65,17 @@ nav {
 
 
 table {
-    width: 85%;
+    /* width: 100%; */
+
     text-align: center;
-    margin-left: 1.5rem;
-    margin-bottom: 5rem;
+    margin-top: 60px;
+    /* margin-left: 1.5rem;
+    margin-bottom: 5rem; */
     /* border-collapse: separate; */
     border-spacing: 4rem 2.3rem;
     border-collapse: collapse;
-    table-layout: fixed;
+    border-bottom: 2px dotted rgb(250, 203, 203);
+    /* table-layout: fixed; */
     
     
   
@@ -126,16 +85,24 @@ table {
 th {
     font-size: 1.7rem;
     text-align: center;
-    height: 3.5rem;
-    width: 5rem;
+    height: 30px;
+    width: 50px;
     margin-top: 1.5rem;
+    align-content: center;
+    /* border-bottom: 2px dotted rgb(250, 203, 203); */
      
 }
 
+th:hover {
+    background-color: rgb(249, 249, 240);
+}
+
 td {
-border-left: 2px dotted rgb(250, 203, 203);
-border-right: 2px dotted rgb(250, 203, 203);
-background-color: rgb(249, 249, 240);
+    height: 30px;
+    width: 50px;
+    border-left: 2px dotted rgb(250, 203, 203);
+    border-right: 2px dotted rgb(250, 203, 203);
+    
 
 }
 
@@ -182,28 +149,3 @@ a:hover {
     opacity: 0.6;
 }
 
-
-/* 
-#addCircle a:active, #addCircle a:visited, #addCircle a:link{
-  text-decoration: none;
-  color: gray;
-  
-  }
-  
-  #addCircle h2 {
-    background-color: white;
-  }
-  
-  #addCircle {
-    opacity: 0.4;
-    background-color: white;
-  }
-  
-  #addCircle:hover {
-    opacity: 0.6;
-  } */
-
-
-/*.hidden {
-    display: none;
-}*/
