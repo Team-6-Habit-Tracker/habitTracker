@@ -84,7 +84,7 @@ let loadHabit = function () {
   } else if (habit == 'Meditation') {
     bigIcon.classList.add(fas);
     bigIcon.classList.add(meditation);
-    color.classList.add('Meditation');
+    color.classList.add('bgmeditation');
   }
 
   selectedHabit.innerHTML = 'You selected ' + habit;
