@@ -173,12 +173,12 @@ let setHabits = function() {
             icon.classList.add(fas);
             icon.classList.add(goToBedEarly);
             color.classList.add('bggoToBedEarly');
-            send.style = '--rest-color: #e16452;';
+            send.style = '--rest-color: #5bb2c2;';
         } else if (addedHabits[i].title == 'Wake up Early') {
             icon.classList.add(fas);
             icon.classList.add(wakeUpEarly);
             color.classList.add('bgwakeUpEarly');
-            send.style = '--rest-color: #f3a0f0;';
+            send.style = '--rest-color: #bf6394;';
         } else if (addedHabits[i].title == 'No Social Media') {
             icon.classList.add('fab');
             icon.classList.add(lessSocialMedia);
