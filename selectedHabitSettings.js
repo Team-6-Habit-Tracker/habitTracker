@@ -84,7 +84,7 @@ let loadHabit = function () {
   } else if (habit == 'Meditation') {
     bigIcon.classList.add(fas);
     bigIcon.classList.add(meditation);
-    color.classList.add('Meditation');
+    color.classList.add('bgmeditation');
   }
 
   selectedHabit.innerHTML = 'You selected ' + habit;
@@ -117,11 +117,7 @@ let addHabit = function() {
     localStorage.setItem('lastID', JSON.stringify(lastHabitID)); // amount of added habits
     localStorage.setItem('added', JSON.stringify(addedHabits)); // array with habit info
 
-<<<<<<< HEAD
-    window.location.href = 'index.html'; // go to index
-=======
   window.location.href = 'index.html'; // go to index
->>>>>>> Mob-coding
 };
 
 const retrieveLocalStorage_selectedHabitSettings = function() {
