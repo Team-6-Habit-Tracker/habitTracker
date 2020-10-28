@@ -228,21 +228,21 @@ footer {
   padding-right: 15px;
 }
 
-#addCircle a:active,
-#addCircle a:visited,
-#addCircle a:link {
-  text-decoration: none;
-  color: gray;
+
+#addCircle {
+  opacity: 0.4;
+  background-color: white;
 }
 
 #addCircle h2 {
   background-color: white;
 }
 
-#addCircle a:active, #addCircle a:visited, #addCircle a:link {
+#addCircle a:active,
+#addCircle a:visited,
+#addCircle a:link {
   text-decoration: none;
   color: gray;
-  
 }
 
 #addCircle:hover {
