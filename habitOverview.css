@@ -19,7 +19,6 @@ a:visited {
 a:hover {
   color: #fff;
   opacity: 0.3;
-  
 }
 
 body {
@@ -32,59 +31,49 @@ body {
   padding: 1.25rem 1.875rem;
 }
 
-
 header {
-    background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
-    position: absolute;
-    top: 0px;
-    width: 100%; 
-    color: white;
-    padding: 0.5rem;
-    display: inline-block;
-    /* justify-content: space-between; */
-    
+  background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  color: white;
+  padding: 0.5rem;
+  display: inline-block;
+  /* justify-content: space-between; */
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .menu {
-    font-size: 1.2rem;
-    position: relative;
-    left: 18rem;
+  font-size: 1.2rem;
+  position: relative;
+  left: 18rem;
 }
 .menu:hover .hidden {
-    display: inline-block;
+  display: inline-block;
 }
 
 .drop-down {
-    position: absolute;
-    right: 0px;
-    top: 45px;
+  position: absolute;
+  right: 0px;
+  top: 45px;
 
-    height: 130px;
-    width: 300px;
+  z-index: 400;
 
-    font-size: 1.2rem;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    padding: 15px;
-    
+  height: 130px;
+  width: 300px;
+
+  font-size: 1.2rem;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .drop-down li {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
-
-
-
-
-
-
-
-
-
 
 .overview-title {
   color: #fff;
@@ -96,7 +85,6 @@ h3 {
   margin: 0 1rem;
   width: 110px;
   color: #fff;
-  
 }
 
 .fas:hover {
@@ -141,7 +129,7 @@ h3 {
   justify-content: center;
 }
 .habit-item:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 
 /* added to hide divs when not selected */
@@ -168,7 +156,6 @@ cursor: pointer;
   top: -10px;
   right: -4px;
   display: none;
-  
 }
 
 .wrapper:hover .erase {
@@ -223,7 +210,8 @@ cursor: pointer;
 }
 
 footer {
-  position: relative;
+  position: fixed;
+  width: 400px;
   bottom: 0px;
   padding-top: 2rem;
   color: #472d30;
@@ -233,7 +221,7 @@ footer {
 }
 
 .go-to {
-  position: relative;
+  position: fixed;
   bottom: 0px;
   right: 0px;
   color: #472d30;
@@ -271,7 +259,8 @@ footer {
     margin: 0 auto;
   }
 
-  footer, header {
+  footer,
+  header {
     width: 400px;
   }
 }
