@@ -105,7 +105,7 @@ let addHabit = function () {
   localStorage.setItem('lastID', JSON.stringify(lastHabitID)); // amount of added habits
   localStorage.setItem('added', JSON.stringify(addedHabits)); // array with habit info
 
-  window.location.href = 'habitOverview.html'; // go to index
+  window.location.href = 'index.html'; // go to index
 };
 
 const retrieveLocalStorage_selectedHabitSettings = function () {
