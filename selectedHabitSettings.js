@@ -42,40 +42,52 @@ const setupEventListeners_selectedHabitSettings = function() {
     document.querySelector('#add_habit').addEventListener('click', addHabit);
 };
 
-let loadHabit = function() {
-    if (habit == 'Training') {
-        bigIcon.classList.add(fas);
-        bigIcon.classList.add(training);
-    } else if (habit == 'Taking the Stairs') {
-        bigIcon.classList.add(fas);
-        bigIcon.classList.add(takingStairs);
-    } else if (habit == 'Reading') {
-        bigIcon.classList.add(fas);
-        bigIcon.classList.add(reading);
-    } else if (habit == 'Studying') {
-        bigIcon.classList.add(fas);
-        bigIcon.classList.add(study);
-    } else if (habit == 'Eating Healthy') {
-        bigIcon.classList.add(fas);
-        bigIcon.classList.add(eatHealthy);
-    } else if (habit == 'Go to Bed Early') {
-        bigIcon.classList.add(fas);
-        bigIcon.classList.add(goToBedEarly);
-    } else if (habit == 'Wake up Early') {
-        bigIcon.classList.add(fas);
-        bigIcon.classList.add(wakeUpEarly);
-    } else if (habit == 'No Social Media') {
-        bigIcon.classList.add('fab');
-        bigIcon.classList.add(lessSocialMedia);
-    } else if (habit == 'No Smoking') {
-        bigIcon.classList.add(fas);
-        bigIcon.classList.add(noSmoking);
-    } else if (habit == 'Meditation') {
-        bigIcon.classList.add(fas);
-        bigIcon.classList.add(meditation);
-    }
+let color = document.querySelector('.color');
 
-    selectedHabit.innerHTML = 'You selected ' + habit;
+let loadHabit = function () {
+  if (habit == 'Training') {
+    bigIcon.classList.add(fas);
+    bigIcon.classList.add(training);
+    color.classList.add('bgtraining');
+  } else if (habit == 'Taking the Stairs') {
+    bigIcon.classList.add(fas);
+    bigIcon.classList.add(takingStairs);
+    color.classList.add('bgtakingTheStairs');
+  } else if (habit == 'Reading') {
+    bigIcon.classList.add(fas);
+    bigIcon.classList.add(reading);
+    color.classList.add('bgreading');
+  } else if (habit == 'Studying') {
+    bigIcon.classList.add(fas);
+    bigIcon.classList.add(study);
+    color.classList.add('bgstudy');
+  } else if (habit == 'Eating Healthy') {
+    bigIcon.classList.add(fas);
+    bigIcon.classList.add(eatHealthy);
+    color.classList.add('bgeatHealthy');
+  } else if (habit == 'Go to Bed Early') {
+    bigIcon.classList.add(fas);
+    bigIcon.classList.add(goToBedEarly);
+    color.classList.add('bggoToBedEarly');
+  } else if (habit == 'Wake up Early') {
+    bigIcon.classList.add(fas);
+    bigIcon.classList.add(wakeUpEarly);
+    color.classList.add('bgwakeUpEarly');
+  } else if (habit == 'No Social Media') {
+    bigIcon.classList.add('fab');
+    bigIcon.classList.add(lessSocialMedia);
+    color.classList.add('bgnoSocialMedia');
+  } else if (habit == 'No Smoking') {
+    bigIcon.classList.add(fas);
+    bigIcon.classList.add(noSmoking);
+    color.classList.add('bgnoSmoking');
+  } else if (habit == 'Meditation') {
+    bigIcon.classList.add(fas);
+    bigIcon.classList.add(meditation);
+    color.classList.add('Meditation');
+  }
+
+  selectedHabit.innerHTML = 'You selected ' + habit;
 };
 
 let addHabit = function() {
@@ -105,7 +117,11 @@ let addHabit = function() {
     localStorage.setItem('lastID', JSON.stringify(lastHabitID)); // amount of added habits
     localStorage.setItem('added', JSON.stringify(addedHabits)); // array with habit info
 
+<<<<<<< HEAD
     window.location.href = 'index.html'; // go to index
+=======
+  window.location.href = 'index.html'; // go to index
+>>>>>>> Mob-coding
 };
 
 const retrieveLocalStorage_selectedHabitSettings = function() {

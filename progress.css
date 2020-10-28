@@ -5,7 +5,6 @@
 
 .progress {
   --progress-color: rgb(255, 255, 255);
-  /* --rest-color: #e27777; */
   height: 129px;
   width: 129px;
   position: absolute;

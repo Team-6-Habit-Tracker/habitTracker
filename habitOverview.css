@@ -19,12 +19,11 @@ a:visited {
 a:hover {
   color: #fff;
   opacity: 0.3;
-  
 }
 
 body {
+  width: 400px;
   min-height: 100vh;
-  /*background-color: #a1b4f1;*/
   background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
   background-repeat: no-repeat;
   align-items: center;
@@ -32,30 +31,27 @@ body {
   padding: 1.25rem 1.875rem;
 }
 
-
 header {
-    background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
-    position: absolute;
-    top: 0px;
-    width: 100%; 
-    color: white;
-    padding: 0.5rem;
-    display: inline-block;
-    /* justify-content: space-between; */
-    
+  background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
+  position: absolute;
+  top: 0px;
+  width: 90%;
+  color: white;
+  padding: 0.5rem;
+  display: inline-block;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .menu {
-    font-size: 1.2rem;
-    position: relative;
-    left: 18rem;
+  font-size: 1.2rem;
+  position: relative;
+  left: 18rem;
 }
 .menu:hover .hidden {
-    display: inline-block;
+  display: inline-block;
 }
 
 .drop-down {
@@ -72,21 +68,11 @@ header {
     border-radius: 5px;
     padding: 15px;
     list-style: none;
-    
 }
 
 .drop-down li {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
-
-
-
-
-
-
-
-
-
 
 .overview-title {
   color: #fff;
@@ -98,7 +84,6 @@ h3 {
   margin: 0 1rem;
   width: 110px;
   color: #fff;
-  
 }
 
 .fas:hover {
@@ -110,7 +95,6 @@ h3 {
   border-radius: 100%;
   text-align: center;
   max-width: 100px;
-  /*background-color: #e26d5c;*/
 }
 
 .container i {
@@ -143,7 +127,7 @@ h3 {
   justify-content: center;
 }
 .habit-item:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 
 /* added to hide divs when not selected */
@@ -170,7 +154,6 @@ cursor: pointer;
   top: -10px;
   right: -4px;
   display: none;
-  
 }
 
 .wrapper:hover .erase {
@@ -188,7 +171,7 @@ cursor: pointer;
 }
 
 /* When you completed a task */
-.task_completed {
+/* .task_completed {
   position: absolute;
   top: 100px;
   z-index: 300;
@@ -199,8 +182,8 @@ cursor: pointer;
   padding: 2rem;
   -webkit-animation: fadeinout 1.5s linear forwards;
   animation: fadeinout 1.5s linear forwards;
-}
-
+} */
+/* 
 @-webkit-keyframes fadeinout {
   0%,
   100% {
@@ -222,10 +205,11 @@ cursor: pointer;
   50% {
     opacity: 1;
   }
-}
+} */
 
 footer {
-  position: relative;
+  position: fixed;
+  width: 400px;
   bottom: 0px;
   padding-top: 2rem;
   color: #472d30;
@@ -235,7 +219,7 @@ footer {
 }
 
 .go-to {
-  position: relative;
+  position: fixed;
   bottom: 0px;
   right: 0px;
   color: #472d30;
@@ -255,14 +239,16 @@ footer {
   background-color: white;
 }
 
-#addCircle {
-  opacity: 0.4;
-  background-color: white;
+#addCircle a:active, #addCircle a:visited, #addCircle a:link {
+  text-decoration: none;
+  color: gray;
+  
 }
 
 #addCircle:hover {
   opacity: 0.6;
 }
+
 /*used the same as Emilia here*/
 
 @media only screen and (min-width: 500px) {
@@ -271,7 +257,8 @@ footer {
     margin: 0 auto;
   }
 
-  footer, header {
+  footer,
+  header {
     width: 400px;
   }
 }
