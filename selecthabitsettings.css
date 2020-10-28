@@ -9,7 +9,7 @@ header {
   font-family: 'Poppins', sans-serif;
 }
 
-header {
+section {
   display: flex;
   align-items: center;
   flex-direction: column;
