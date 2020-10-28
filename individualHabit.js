@@ -163,9 +163,13 @@ let loadHabit = function() {
 
     if (addedHabits[ID].totalClicks < addedHabits[ID].frequency) {
         let left = addedHabits[ID].frequency - addedHabits[ID].totalClicks;
-        document.querySelector('#left').innerHTML = 'You need to complete the task ' + left + ' more times to reach your goal of ' + addedHabits[ID].frequency;
+        document.querySelector('#left').innerHTML = 'You need to complete the task ' + left + ' more times to reach your goal of ' + addedHabits[ID].frequency + '/week.';
     } else {
-        document.querySelector('#left').innerHTML = 'You have completed the tast ' + addedHabits[ID].frequency + ' times. You have reached your GOAL!';
+        if (addedHabits[ID].frequency == 1) {
+            document.querySelector('#left').innerHTML = 'You have completed the task ' + addedHabits[ID].frequency + ' time. You have reached your GOAL!';
+        } else {
+            document.querySelector('#left').innerHTML = 'You have completed the task ' + addedHabits[ID].frequency + ' times. You have reached your GOAL!';
+        }
     }
 
     let end = addedHabits[ID].frequency;
@@ -183,7 +187,7 @@ let loadHabit = function() {
         chart.options.data[0].dataPoints[i].y = clicks[i];
     };
 
-    selectedHabit.forEach(element => element.innerHTML = habit.toUpperCase());
+    selectedHabit.forEach(element => element.innerHTML = habit);
 
 
 }
