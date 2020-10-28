@@ -28,19 +28,19 @@ const retrieveLocalStorage_overView = function () {
 
 let setDay = function() {
   if (day == 0) {
-    document.querySelector(".monday").style = "color: black";
+    document.querySelector(".monday").style = "color: #5bb2c2";
   } else if (day == 1) {
-    document.querySelector(".tuesday").style = "color: black";
+    document.querySelector(".tuesday").style = "color: #5bb2c2";
   } else if (day == 2) {
-    document.querySelector(".wednesday").style = "color: black";
+    document.querySelector(".wednesday").style = "color: #5bb2c2";
   } else if (day == 3) {
-    document.querySelector(".thursday").style = "color: black";
+    document.querySelector(".thursday").style = "color: #5bb2c2";
   } else if (day == 4) {
-    document.querySelector(".friday").style = "color: black";
+    document.querySelector(".friday").style = "color: #5bb2c2";
   } else if (day == 5) {
-    document.querySelector(".saturday").style = "color: black";
+    document.querySelector(".saturday").style = "color: #5bb2c2";
   } else if (day == 6) {
-    document.querySelector(".sunday").style = "color: black";
+    document.querySelector(".sunday").style = "color: #5bb2c2";
   } 
 }
 
