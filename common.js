@@ -75,30 +75,33 @@ let goToIndividualHabit = function() {
     targetedHabit = event.target;
     console.log(targetedHabit)
 
-    if (targetedHabit.id == "rafe0") {
-        doneHabitID = 0;
-    } else if (targetedHabit.id == "rafe1") {
-        doneHabitID = 1;
-    } else if (targetedHabit.id == "rafe2") {
-        doneHabitID = 2;
-    } else if (targetedHabit.id == "rafe3") {
-        doneHabitID = 3;
-    } else if (targetedHabit.id == "rafe4") {
-        doneHabitID = 4;
-    } else if (targetedHabit.id == "rafe5") {
-        doneHabitID = 5;
-    } else if (targetedHabit.id == "rafe6") {
-        doneHabitID = 6;
-    } else if (targetedHabit.id == "rafe7") {
-        doneHabitID = 7;
-    } else if (targetedHabit.id == "rafe8") {
-        doneHabitID = 8;
-    } else if (targetedHabit.id == "rafe9") {
-        doneHabitID = 9;
+    if (targetedHabit.innerHTML != '') {
+        if (targetedHabit.id == "rafe0") {
+            doneHabitID = 0;
+        } else if (targetedHabit.id == "rafe1") {
+            doneHabitID = 1;
+        } else if (targetedHabit.id == "rafe2") {
+            doneHabitID = 2;
+        } else if (targetedHabit.id == "rafe3") {
+            doneHabitID = 3;
+        } else if (targetedHabit.id == "rafe4") {
+            doneHabitID = 4;
+        } else if (targetedHabit.id == "rafe5") {
+            doneHabitID = 5;
+        } else if (targetedHabit.id == "rafe6") {
+            doneHabitID = 6;
+        } else if (targetedHabit.id == "rafe7") {
+            doneHabitID = 7;
+        } else if (targetedHabit.id == "rafe8") {
+            doneHabitID = 8;
+        } else if (targetedHabit.id == "rafe9") {
+            doneHabitID = 9;
+        }
+
+        localStorage.setItem('doneHabitID', JSON.stringify(doneHabitID));
+        window.location.href = "individualHabit.html";
     }
 
-    localStorage.setItem('doneHabitID', JSON.stringify(doneHabitID));
-    window.location.href = "individualHabit.html";
 }
 
 const goBack = function() {
