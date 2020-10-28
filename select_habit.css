@@ -21,44 +21,8 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-header {
-    background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    color: white;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-}
-
 .hidden {
     display: none;
-}
-
-.menu {
-    font-size: 1.2rem;
-}
-
-.menu:hover .hidden {
-    display: inline-block;
-}
-
-.drop-down {
-    position: absolute;
-  
-    right: 0px;
-    top: 45px;
-    height: 130px;
-    width: 300px;
-    font-size: 1.2rem;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    padding: 15px;
-}
-
-.drop-down li {
-    padding-bottom: 5px;
 }
 
 main {
@@ -160,23 +124,6 @@ footer {
     color: white;
 }
 
-#icon {
-    font-size: 5rem;
-    margin-top: 30%;
-    border: 5px solid var(--habit_1-color);
-    border-radius: 50%;
-    padding: 10%;
-}
-
-.selected {
-    margin-top: 20px;
-    font-size: 1.5rem;
-}
-
-.testClass {
-    font-weight: 900;
-}
-
 @media only screen and (min-width: 500px) {
     body {
         width: 400px;
@@ -188,4 +135,3 @@ footer {
     }
 }
 
-;
