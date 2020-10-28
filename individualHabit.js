@@ -163,7 +163,7 @@ let loadHabit = function() {
 
     if (addedHabits[ID].totalClicks < addedHabits[ID].frequency) {
         let left = addedHabits[ID].frequency - addedHabits[ID].totalClicks;
-        document.querySelector('#left').innerHTML = 'You need to complete the task ' + left + ' more times to reach your goal';
+        document.querySelector('#left').innerHTML = 'You need to complete the task ' + left + ' more times to reach your goal of ' + addedHabits[ID].frequency;
     } else {
         document.querySelector('#left').innerHTML = 'You have completed the tast ' + addedHabits[ID].frequency + ' times. You have reached your GOAL!';
     }
