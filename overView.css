@@ -1,7 +1,8 @@
+/* Not started with this page */
 body {
     align-items: center;
     display: block;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .training {
@@ -9,39 +10,39 @@ body {
 }
 
 .takingTheStairs {
-    color: #A3C4CB;
+    color: #a3c4cb;
 }
 
 .reading {
-    color: #E2C6E2;
+    color: #e2c6e2;
 }
 
 .study {
-    color: #FFE1A8;
+    color: #ffe1a8;
 }
 
 .eatHealthy {
-    color: #CED0AC;
+    color: #ced0ac;
 }
 
 .goToBedEarly {
-    color: #E16452;
+    color: #5bb2c2;
 }
 
 .wakeUpEarly {
-    color: #F3A0F0;
+    color: #bf6394;
 }
 
 .noSocialMedia {
-    color: #C89E98;
+    color: #c89e98;
 }
 
 .noSmoking {
-    color: #B0B6D8;
+    color: #b0b6d8;
 }
 
 .meditation {
-    color: #A3CBB1;
+    color: #a3cbb1;
 }
 
 h1 {
@@ -54,19 +55,28 @@ table {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    border-collapse: separate;
-    border-spacing: 5rem 1rem;
+    /* border-collapse: separate; */
+    border-spacing: 4rem 2.3rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* width: 100%;  */
+
 }
 
 th {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: center;
+}
+
+td {
+border: 1px solid rgb(136, 133, 133);
+
 }
 
 .days {
     border: solid 1px;
     border-radius: 50%;
-    color: rgb(245, 112, 112);
+    color: rgb(240, 184, 184);
 }
 
 .home {
@@ -81,9 +91,40 @@ th {
     right: 5vh;
     margin-top: 5vh;
     float: right;
-    color: rgb(245, 112, 112);
 }
 
-.hidden {
-    display: none;
+a:active,
+a:visited,
+a:link {
+    color: gray;
 }
+
+a:hover {
+    opacity: 0.6;
+}
+
+
+/* 
+#addCircle a:active, #addCircle a:visited, #addCircle a:link{
+  text-decoration: none;
+  color: gray;
+  
+  }
+  
+  #addCircle h2 {
+    background-color: white;
+  }
+  
+  #addCircle {
+    opacity: 0.4;
+    background-color: white;
+  }
+  
+  #addCircle:hover {
+    opacity: 0.6;
+  } */
+
+
+/*.hidden {
+    display: none;
+}*/
