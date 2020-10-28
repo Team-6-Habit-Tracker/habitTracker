@@ -1,5 +1,6 @@
 let bigIcon = document.querySelector('#icon');
 let selectedHabit = document.querySelectorAll('.selected');
+let color = document.querySelector('.color');
 
 let habit, doneHabitID, ID;
 
@@ -8,14 +9,6 @@ let habitIndex = [];
 let done = [];
 let clicks = [];
 let frequency, lastHabitID, index;
-
-
-let HabitSetting = function(id, title, frequency, done) {
-    this.id = id;
-    this.title = title;
-    this.frequency = frequency;
-    this.done = done;
-}
 
 // HABITS
 const fas = "fas";
@@ -86,37 +79,79 @@ let loadHabit = function() {
 
     habit = addedHabits[ID].title;
 
+    // if (habit == 'Training') {
+    //     bigIcon.classList.add(fas);
+    //     bigIcon.classList.add(training);
+    // } else if (habit == 'Taking the Stairs') {
+    //     bigIcon.classList.add(fas);
+    //     bigIcon.classList.add(takingStairs);
+    // } else if (habit == 'Reading') {
+    //     bigIcon.classList.add(fas);
+    //     bigIcon.classList.add(reading);
+    // } else if (habit == 'Studying') {
+    //     bigIcon.classList.add(fas);
+    //     bigIcon.classList.add(study);
+    // } else if (habit == 'Eating Healthy') {
+    //     bigIcon.classList.add(fas);
+    //     bigIcon.classList.add(eatHealthy);
+    // } else if (habit == 'Go to Bed Early') {
+    //     bigIcon.classList.add(fas);
+    //     bigIcon.classList.add(goToBedEarly);
+    // } else if (habit == 'Wake up Early') {
+    //     bigIcon.classList.add(fas);
+    //     bigIcon.classList.add(wakeUpEarly);
+    // } else if (habit == 'No Social Media') {
+    //     bigIcon.classList.add('fab');
+    //     bigIcon.classList.add(lessSocialMedia);
+    // } else if (habit == 'No Smoking') {
+    //     bigIcon.classList.add(fas);
+    //     bigIcon.classList.add(noSmoking);
+    // } else if (habit == 'Meditation') {
+    //     bigIcon.classList.add(fas);
+    //     bigIcon.classList.add(meditation);
+    // };
+
     if (habit == 'Training') {
         bigIcon.classList.add(fas);
         bigIcon.classList.add(training);
-    } else if (habit == 'Taking the Stairs') {
+        color.classList.add('bgtraining');
+      } else if (habit == 'Taking the Stairs') {
         bigIcon.classList.add(fas);
         bigIcon.classList.add(takingStairs);
-    } else if (habit == 'Reading') {
+        color.classList.add('bgtakingTheStairs');
+      } else if (habit == 'Reading') {
         bigIcon.classList.add(fas);
         bigIcon.classList.add(reading);
-    } else if (habit == 'Studying') {
+        color.classList.add('bgreading');
+      } else if (habit == 'Studying') {
         bigIcon.classList.add(fas);
         bigIcon.classList.add(study);
-    } else if (habit == 'Eating Healthy') {
+        color.classList.add('bgstudy');
+      } else if (habit == 'Eating Healthy') {
         bigIcon.classList.add(fas);
         bigIcon.classList.add(eatHealthy);
-    } else if (habit == 'Go to Bed Early') {
+        color.classList.add('bgeatHealthy');
+      } else if (habit == 'Go to Bed Early') {
         bigIcon.classList.add(fas);
         bigIcon.classList.add(goToBedEarly);
-    } else if (habit == 'Wake up Early') {
+        color.classList.add('bggoToBedEarly');
+      } else if (habit == 'Wake up Early') {
         bigIcon.classList.add(fas);
         bigIcon.classList.add(wakeUpEarly);
-    } else if (habit == 'No Social Media') {
+        color.classList.add('bgwakeUpEarly');
+      } else if (habit == 'No Social Media') {
         bigIcon.classList.add('fab');
         bigIcon.classList.add(lessSocialMedia);
-    } else if (habit == 'No Smoking') {
+        color.classList.add('bgnoSocialMedia');
+      } else if (habit == 'No Smoking') {
         bigIcon.classList.add(fas);
         bigIcon.classList.add(noSmoking);
-    } else if (habit == 'Meditation') {
+        color.classList.add('bgnoSmoking');
+      } else if (habit == 'Meditation') {
         bigIcon.classList.add(fas);
         bigIcon.classList.add(meditation);
-    };
+        color.classList.add('bgmeditation');
+      }
 
     for (let j = 0; j < 7; j++) {
         if (addedHabits[ID].doneDay[j] == true) {
