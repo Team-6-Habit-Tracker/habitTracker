@@ -62,7 +62,6 @@ header {
 
 main {
     margin-top: 50px;
-
 }
 
 h2 {
@@ -105,10 +104,6 @@ nav a:link,
     padding-right: 2em;
     align-self: center;
     width: 40px;
-}
-
-i {
-    font-size: 1.9rem;
 }
 
 .habit_1 i {
