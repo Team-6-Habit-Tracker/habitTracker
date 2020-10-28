@@ -97,9 +97,7 @@ let goToIndividualHabit = function () {
 };
 
 const goBack = function () {
-  if (window.history.back() != 'selectedHabitSettings.html') {
     window.history.back();
-  }
 };
 
 console.log(document.referrer);
