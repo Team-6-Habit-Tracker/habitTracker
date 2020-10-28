@@ -1,61 +1,63 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Habit settings</title>
-        <!--FONTS-->
-        
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-        <!--CSS-->
-       
-        <link rel="stylesheet" href="selecthabitsettings.css" type="text/css">
-       
-        <!-- Font awesome link -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Habit settings</title>
+    <!--FONTS-->
 
-        <script src="https://kit.fontawesome.com/1fb5624570.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="color.css" />
 
-        
-    </head>
-    <body>
-        <div class="back_x">
-            <a href="select_habit.html">
-             <i class="fas fa-times"></i>
-             </a>
-        </div>
-    <header> 
-            
-        <div class="habit_container"> 
+    <link rel="stylesheet" href="selecthabitsettings.css" type="text/css" />
+
+    <!-- Font awesome link -->
+
+    <script
+      src="https://kit.fontawesome.com/1fb5624570.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="back_x">
+      <a href="select_habit.html">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
+    <header>
+      <div class="habit_container color">
         <i class="" id="icon"> </i>
+      </div>
 
-      </div>   
-        
-     <p class="selected"></p>
-     </header>
-    
-       <main>
-      <label for="frequency" class="habit_text"> <br> How many times per week do you want to 
-complete this habit?</label>
-        <form class="selecttime"> 
+      <p class="selected"></p>
+    </header>
+
+    <main>
+      <label for="frequency" class="habit_text">
+        <br />
+        How many times per week do you want to complete this habit?</label
+      >
+      <form class="selecttime">
         <select id="frequency">
-            <option value = "1">1</option>
-            <option value = "2">2</option>
-            <option value = "3">3</option>
-            <option value = "4">4</option>
-            <option value = "5">5</option>
-            <option value = "6">6</option>
-            <option value = "7">7</option>
-         </select> 
-         <input type="button" value="Add habit" id="add_habit" > 
-        </form>
-  </main> 
-        <script src="selectedHabitSettings.js"></script>
-        <!-- <script src="common.js"></script> -->
-        <footer>
-
-        </footer>
-    </body>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+        <input type="button" value="Add habit" id="add_habit" />
+      </form>
+    </main>
+    <script src="selectedHabitSettings.js"></script>
+    <!-- <script src="common.js"></script> -->
+    <footer></footer>
+  </body>
 </html>
