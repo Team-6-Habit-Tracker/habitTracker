@@ -19,18 +19,75 @@ a:visited {
 a:hover {
   color: #fff;
   opacity: 0.3;
+  
 }
 
 body {
-  width: 400px;
-  background-color: #c9cba3;
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  /*background-color: #a1b4f1;*/
+  background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
+  background-repeat: no-repeat;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
   padding: 1.25rem 1.875rem;
 }
 
+
+header {
+    background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997);
+    position: absolute;
+    top: 0px;
+    width: 100%; 
+    color: white;
+    padding: 0.5rem;
+    display: inline-block;
+    /* justify-content: space-between; */
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.menu {
+    font-size: 1.2rem;
+    position: relative;
+    left: 18rem;
+}
+.menu:hover .hidden {
+    display: inline-block;
+}
+
+.drop-down {
+    position: absolute;
+    right: 0px;
+    top: 45px;
+
+    height: 130px;
+    width: 300px;
+
+    font-size: 1.2rem;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 15px;
+    
+}
+
+.drop-down li {
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
 .overview-title {
-  color: #472d30;
+  color: #fff;
   font-size: 1rem;
   padding-bottom: 2rem;
 }
@@ -38,15 +95,20 @@ body {
 h3 {
   margin: 0 1rem;
   width: 110px;
+  color: #fff;
+  
 }
 
+.fas:hover {
+  cursor: pointer;
+}
 .container h2 {
-  background-color: #e26d5c;
   height: 100px;
   width: 130px;
   border-radius: 100%;
   text-align: center;
   max-width: 100px;
+  /*background-color: #e26d5c;*/
 }
 
 .container i {
@@ -59,6 +121,7 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1.875rem;
   grid-gap: 1.875rem;
+  margin-top: 2rem;
 }
 
 .habit-item {
@@ -76,6 +139,9 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.habit-item:hover {
+cursor: pointer;
 }
 
 /* added to hide divs when not selected */
@@ -101,14 +167,14 @@ h3 {
   color: black;
   top: -10px;
   right: -4px;
-  display:none;
+  display: none;
+  
 }
-
 
 .wrapper:hover .erase {
-display: inline-block;
+  display: inline-block;
+  cursor: pointer;
 }
-
 
 .habit-title {
   position: absolute;
@@ -119,8 +185,6 @@ display: inline-block;
   top: 135px;
 }
 
-
-
 /* When you completed a task */
 .task_completed {
   position: absolute;
@@ -128,7 +192,7 @@ display: inline-block;
   z-index: 300;
   width: 90%;
   height: 80%;
-  background: red;
+  background: rgb(255, 254, 254);
   border-radius: 15px;
   padding: 2rem;
   -webkit-animation: fadeinout 1.5s linear forwards;
@@ -164,22 +228,25 @@ footer {
   padding-top: 2rem;
   color: #472d30;
   display: grid;
+  grid-gap: 15rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .go-to {
-  position: absolute;
+  position: relative;
   bottom: 0px;
   right: 0px;
   color: #472d30;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 1rem;
   padding-right: 15px;
 }
 
-#addCircle {
-  opacity: 0.4;
-  background-color: white;
+#addCircle a:active,
+#addCircle a:visited,
+#addCircle a:link {
+  text-decoration: none;
+  color: gray;
 }
 
 #addCircle h2 {
@@ -204,7 +271,7 @@ footer {
     margin: 0 auto;
   }
 
-  footer {
+  footer, header {
     width: 400px;
   }
 }

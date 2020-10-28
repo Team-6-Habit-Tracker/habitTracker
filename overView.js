@@ -92,7 +92,6 @@ let setHabits = function () {
       icon.classList.add(fas);
       icon.classList.add(meditation);
     }
-    console.log(addedHabits[i].doneDay[3]);
     // Matcha aktivitet med dag
     // Om aktivitet har skett visa check
     for (let j = 0; j < 7; j++) {

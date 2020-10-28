@@ -1,4 +1,6 @@
 
+
+
 .training {
   color: #805159;
 }
@@ -20,11 +22,11 @@
 }
 
 .goToBedEarly {
-  color: #e16452;
+  color: #5bb2c2;
 }
 
 .wakeUpEarly {
-  color: #f3a0f0;
+  color: #bf6394;
 }
 
 .noSocialMedia {
@@ -42,43 +44,101 @@
 /* Background color for icons*/
 
 .bgtraining {
-  color: #805159;
+  background-color: #805159;
 }
 
 .bgtakingTheStairs {
-  color: #a3c4cb;
+  background-color: #a3c4cb;
 }
 
 .bgreading {
-  color: #e2c6e2;
+  background-color: #e2c6e2;
 }
 
 .bgstudy {
-  color: #ffe1a8;
+  background-color: #ffe1a8;
 }
 
 .bgeatHealthy {
-  color: #ced0ac;
+  background-color: #ced0ac;
 }
 
 .bggoToBedEarly {
-  color: #e16452;
+  background-color:#5bb2c2;
 }
 
 .bgwakeUpEarly {
-  color: #f3a0f0;
+  background-color: #bf6394;
 }
 
 .bgnoSocialMedia {
-  color: #c89e98;
+  background-color: #c89e98;
 }
 
 .bgnoSmoking {
-  color: #b0b6d8;
+  background-color: #b0b6d8;
 }
 
 .bgmeditation {
-  color: #a3cbb1;
+  background-color: #a3cbb1;
 }
 
 
+/* Header and footer for every page*/
+
+/* header { */
+    /* background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997); */
+    /* position: fixed; */
+    /* top: 0px; */
+    /* width: 100%; */
+    /* color: white; */
+    /* padding: 0.5rem; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+/* } */
+/*  */
+/* .hidden { */
+    /* display: none; */
+/* } */
+/*  */
+/* .menu { */
+    /* font-size: 1.2rem; */
+/* } */
+/* .menu:hover .hidden { */
+    /* display: inline-block; */
+/* } */
+/*  */
+/* .drop-down { */
+    /* position: absolute; */
+    /* right: 0px; */
+    /* top: 45px; */
+/*  */
+    /* height: 130px; */
+    /* width: 300px; */
+/*  */
+    /* font-size: 1.2rem; */
+    /* background-color: whitesmoke; */
+    /* border-radius: 5px; */
+    /* padding: 15px; */
+/*      */
+/* } */
+/*  */
+/* .drop-down li { */
+    /* padding-bottom: 5px; */
+/* } */
+
+/*Background color habit overview*/
+/* background-image: linear-gradient(100deg, #a36a74, #bb737f, #dd8997); */
+
+
+
+/*   font-family: 'Montserrat', sans-serif; */
+
+/* To do: 
+- Overview page styling
+- Media queries for all pages 
+- Start page reveal 
+- Finishing touches
+- Style nav bar
+- Make the footer stick
+*/ 
