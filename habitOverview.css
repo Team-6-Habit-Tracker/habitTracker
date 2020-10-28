@@ -240,14 +240,16 @@ footer {
   background-color: white;
 }
 
-#addCircle {
-  opacity: 0.4;
-  background-color: white;
+#addCircle a:active, #addCircle a:visited, #addCircle a:link {
+  text-decoration: none;
+  color: gray;
+  
 }
 
 #addCircle:hover {
   opacity: 0.6;
 }
+
 /*used the same as Emilia here*/
 
 @media only screen and (min-width: 500px) {

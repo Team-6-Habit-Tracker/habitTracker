@@ -222,6 +222,7 @@ function habitDelete(e) {
   if (e.target.classList.contains('erase')) {
     deleteItem.style = 'display: none';
 
+    console.log(deleteItem)
     splitID = deleteItem.id.split('v');
     NR = splitID[1];
 
