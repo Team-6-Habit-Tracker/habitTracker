@@ -49,7 +49,7 @@ h3 {
   color: rgb(158, 119, 119);
 }
 
-.fa-caret-left {  
+.fa-caret-left {
   margin-left: 2rem;
 }
 
@@ -140,8 +140,15 @@ h3 {
   top: 135px;
 }
 
-
 footer {
+  background-image: linear-gradient(to top, #79c2cf, rgb(104, 181, 201) 33%);
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+}
+/*footer {
   position: fixed;
   width: 400px;
   bottom: 0px;
@@ -150,19 +157,25 @@ footer {
   display: grid;
   grid-gap: 15rem;
   grid-template-columns: repeat(2, 1fr);
-} 
+} */
 
- .go-to {
+.go-to {
   position: absolute;
   bottom: 0px;
   right: 0px;
   color: #472d30;
   font-weight: bold;
-  font-size: 1rem;
-  padding-right: 15px;
+  font-size: 1.3rem;
+  /*padding-right: 15px;*/
+  padding: 0.5rem 1rem;
 }
 
-
+.fa-plus-circle {
+  color: #fff;
+}
+.fa-calendar-alt {
+  color: #fff;
+}
 #addCircle {
   opacity: 0.4;
   background-color: rgb(197, 197, 219);
@@ -170,8 +183,6 @@ footer {
 
 #addCircle h2 {
   background-color: rgb(197, 197, 219);
-
-
 }
 
 #addCircle a:active,
@@ -188,11 +199,11 @@ footer {
 /*used the same as Emilia here*/
 @media only screen and (min-width: 500px) {
   body {
-      width: 400px;
-      margin: 0 auto;
+    width: 400px;
+    margin: 0 auto;
   }
   header,
   footer {
-      width: 400px;
+    width: 400px;
   }
 }
