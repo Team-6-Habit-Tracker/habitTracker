@@ -37,8 +37,6 @@ const retrieveLocalStorage_dropDown = function () {
 let habitManueList = function () {
   for (let i = 0; i < addedHabits.length; i++) {
     let dropDownList = document.querySelector('#rafe' + addedHabits[i].id);
-    console.log(dropDownList);
-    console.log(addedHabits[i].title);
     
     if (addedHabits[i].title == 'Training') {
       dropDownList.innerHTML = 'Training';
@@ -65,35 +63,20 @@ let habitManueList = function () {
 };
 let goToIndividualHabit = function () {
   targetedHabit = event.target;
-  console.log(targetedHabit);
+  
+    if (targetedHabit.id.indexOf('rafe') == 0) { // if it contains the correct ids
+      if (targetedHabit.innerHTML != '') { // if theres a habit added
 
-  if (targetedHabit.innerHTML != '') {
-    if (targetedHabit.id == 'rafe0') {
-        doneHabitID = 0;
-    } else if (targetedHabit.id == 'rafe1') {
-        doneHabitID = 1;
-    } else if (targetedHabit.id == 'rafe2') {
-        doneHabitID = 2;
-    } else if (targetedHabit.id == 'rafe3') {
-        doneHabitID = 3;
-    } else if (targetedHabit.id == 'rafe4') {
-        doneHabitID = 4;
-    } else if (targetedHabit.id == 'rafe5') {
-        doneHabitID = 5;
-    } else if (targetedHabit.id == 'rafe6') {
-        doneHabitID = 6;
-    } else if (targetedHabit.id == 'rafe7') {
-        doneHabitID = 7;
-    } else if (targetedHabit.id == 'rafe8') {
-        doneHabitID = 8;
-    } else if (targetedHabit.id == 'rafe9') {
-        doneHabitID = 9;
+        for (let i = 0; i < 10; i++) {
+          if (targetedHabit.id == 'rafe' + i) {
+              doneHabitID = i;
+          }
+        }
+
+        localStorage.setItem('doneHabitID', JSON.stringify(doneHabitID));
+        window.location.href = 'individualHabit.html';
     }
-
-    localStorage.setItem('doneHabitID', JSON.stringify(doneHabitID));
-    window.location.href = 'individualHabit.html';
-
-    }
+  }
 };
 
 const goBack = function () {
