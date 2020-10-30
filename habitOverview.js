@@ -265,6 +265,8 @@ function habitDelete(e) {
 
         lastHabitID = addedHabits.length;
 
+        document.querySelector('#rafe' + NR).classList.add('hidden');
+
         //save the updated array to localStorage without the deleted div
         localStorage.setItem('added', JSON.stringify(addedHabits));
         localStorage.setItem('lastID', JSON.stringify(lastHabitID));
