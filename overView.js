@@ -1,3 +1,7 @@
+let addedHabits = [];
+let day;
+
+// HABITS 
 const fas = 'fas';
 const training = 'fa-dumbbell';
 const takingStairs = 'fa-walking';
@@ -10,8 +14,6 @@ const lessSocialMedia = 'fa-instagram';
 const noSmoking = 'fa-smoking-ban';
 const meditation = 'fa-om';
 const circle = 'fa-check-circle';
-let addedHabits = [];
-let day;
 
 const retrieveLocalStorage_overView = function () {
   if (JSON.parse(localStorage.getItem('added'))) {
@@ -19,11 +21,10 @@ const retrieveLocalStorage_overView = function () {
     setHabits();
   }
  
-  //if (JSON.parse(localStorage.getItem('day')))
-   //{
+  if (JSON.parse(localStorage.getItem('day'))) {
     day = JSON.parse(localStorage.getItem('day'));
     setDay();
-  //}
+  }
 };
 
 let setDay = function() {
@@ -48,7 +49,6 @@ let setHabits = function () {
   for (let i = 0; i < addedHabits.length; i++) {
     let tr = document.querySelector('#tr' + addedHabits[i].id);
     let icon = document.querySelector('#habit' + addedHabits[i].id);
-    let title = document.querySelector('#title' + addedHabits[i].id);
 
     tr.classList.remove('hidden');
     if (addedHabits[i].title == 'Training') {
@@ -92,10 +92,8 @@ let setHabits = function () {
       icon.classList.add(fas);
       icon.classList.add(meditation);
     }
-    // Matcha aktivitet med dag
-    // Om aktivitet har skett visa check
+    
     for (let j = 0; j < 7; j++) {
-      // compare += addedHabits[i].clicked[j];
       if (addedHabits[i].doneDay[j] == true) {
         let dot = document.querySelector('#tr' + addedHabits[i].id + j);
         dot.classList.add(circle);

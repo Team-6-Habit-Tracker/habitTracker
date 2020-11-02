@@ -21,10 +21,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.hidden {
-    display: none;
-}
-
 main {
     margin-top: 20px;
 }
@@ -50,9 +46,6 @@ li {
     padding-left: 0.6rem;
 }
 
-nav a:active,
-nav a:visited,
-nav a:link,
 #select_habit_list a:active,
 #select_habit_list a:visited,
 #select_habit_list a:link {
@@ -110,28 +103,3 @@ nav a:link,
 .habit_10 i {
     color: var(--habit_10-color);
 }
-
-footer {
-    background-image: linear-gradient(to top, #79c2cf, rgb(104, 181, 201) 33%);
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    font-size: 1.25rem;
-    padding: 0.2rem 1rem;
-}
-
-.fas {
-    color: white;
-}
-
-@media only screen and (min-width: 500px) {
-    body {
-        width: 400px;
-        margin: 0 auto;
-    }
-    header,
-    footer {
-        width: 400px;
-    }
-}
-

@@ -1,142 +1,93 @@
-
+:root {
+  --training: #805159;
+  --takingTheStairs: #A3C4CB;
+  --reading: #E2C6E2;
+  --study: #FFE1A8;
+  --eatHealthy: #CED0AC;
+  --goToBedEarly: #5bb2c2;
+  --wakeUpEarly: #bf6394;
+  --noSocialMedia: #C89E98;
+  --noSmoking: #B0B6D8;
+  --meditation: #A3CBB1;
+}
 .training {
-  color: #805159;
+  color: var(--training);
 }
 
 .takingTheStairs {
-  color: #a3c4cb;
+  color: var(--takingTheStairs);
 }
 
 .reading {
-  color: #e2c6e2;
+  color:  var(--reading);
 }
 
 .study {
-  color: #ffe1a8;
+  color: var(--study);
 }
 
 .eatHealthy {
-  color: #ced0ac;
+  color: var(--eatHealthy);
 }
 
 .goToBedEarly {
-  color: #5bb2c2;
+  color: var(--goToBedEarly);
 }
 
 .wakeUpEarly {
-  color: #bf6394;
+  color: var(--wakeUpEarly);
 }
 
 .noSocialMedia {
-  color: #c89e98;
+  color: var(--noSocialMedia);
 }
 
 .noSmoking {
-  color: #b0b6d8;
+  color: var(--noSmoking);
 }
 
 .meditation {
-  color: #a3cbb1;
+  color: var(--meditation);
 }
 
 /* Background color for icons*/
 
 .bgtraining {
-  background-color: #805159;
+  background-color: var(--training);
 }
 
 .bgtakingTheStairs {
-  background-color: #a3c4cb;
+  background-color: var(--takingTheStairs);
 }
 
 .bgreading {
-  background-color: #e2c6e2;
+  background-color: var(--reading);
 }
 
 .bgstudy {
-  background-color: #ffe1a8;
+  background-color: var(--study);
 }
 
 .bgeatHealthy {
-  background-color: #ced0ac;
+  background-color: var(--eatHealthy);
 }
 
 .bggoToBedEarly {
-  background-color:#5bb2c2;
+  background-color: var(--goToBedEarly);
 }
 
 .bgwakeUpEarly {
-  background-color: #bf6394;
+  background-color: var(--wakeUpEarly);
 }
 
 .bgnoSocialMedia {
-  background-color: #c89e98;
+  background-color: var(--noSocialMedia);
 }
 
 .bgnoSmoking {
-  background-color: #b0b6d8;
+  background-color: var(--noSmoking);
 }
 
 .bgmeditation {
-  background-color: #a3cbb1;
+  background-color: var(--meditation);
 }
-
-
-/* Header and footer for every page*/
-
-/* header { */
-    /* background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997); */
-    /* position: fixed; */
-    /* top: 0px; */
-    /* width: 100%; */
-    /* color: white; */
-    /* padding: 0.5rem; */
-    /* display: flex; */
-    /* justify-content: space-between; */
-/* } */
-/*  */
-/* .hidden { */
-    /* display: none; */
-/* } */
-/*  */
-/* .menu { */
-    /* font-size: 1.2rem; */
-/* } */
-/* .menu:hover .hidden { */
-    /* display: inline-block; */
-/* } */
-/*  */
-/* .drop-down { */
-    /* position: absolute; */
-    /* right: 0px; */
-    /* top: 45px; */
-/*  */
-    /* height: 130px; */
-    /* width: 300px; */
-/*  */
-    /* font-size: 1.2rem; */
-    /* background-color: whitesmoke; */
-    /* border-radius: 5px; */
-    /* padding: 15px; */
-/*      */
-/* } */
-/*  */
-/* .drop-down li { */
-    /* padding-bottom: 5px; */
-/* } */
-
-/*Background color habit overview*/
-/* background-image: linear-gradient(100deg, #a36a74, #bb737f, #dd8997); */
-
-
-
-/*   font-family: 'Montserrat', sans-serif; */
-
-/* To do: 
-- Overview page styling
-- Media queries for all pages 
-- Start page reveal 
-- Finishing touches
-- Style nav bar
-- Make the footer stick
-*/ 

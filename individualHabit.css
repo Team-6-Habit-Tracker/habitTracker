@@ -8,13 +8,13 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .habit_container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /*background: linear-gradient(100deg, #805159, #bb737f, #dd8997);*/
     height: 175px;
     width: 175px;
     border-radius: 50%;
@@ -39,5 +39,11 @@ p.selected {
 
   #left {
     margin-top: 2rem;
+    margin-bottom: 3rem;
     color: #bb737f;
+  }
+
+  #chartContainer {
+    height: 300px; 
+    width: 100%;
   }

@@ -1,6 +1,5 @@
 // select habit page
 let selectHabitList = document.querySelector('#select_habit_list');
-let select = document.querySelectorAll('.select');
 
 let habitIndex = [];
 let habit, index;
@@ -15,8 +14,7 @@ let chooseHabit = function (event) {
   chosenHabit = event.target; // li where the mouse was pressed
 
   if(chosenHabit.classList.contains('select')) {
-    console.log(chosenHabit)
-    // Could make a for loop here to clean up the code if theres time
+
     if (chosenHabit.classList.contains('habit_1')) {
       habit = 'Training';
       index = 'habit_1';
@@ -70,5 +68,4 @@ const removeSelectedHabits = function () {
 console.log('Application has started');
 
 setupEventListeners_selectHabit();
-
 removeSelectedHabits();

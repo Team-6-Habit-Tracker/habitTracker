@@ -1,6 +1,7 @@
 // selected habit settings page
 let bigIcon = document.querySelector('#icon');
 let selectedHabit = document.querySelector('.selected');
+let color = document.querySelector('.color');
 
 let addedHabits = [];
 let habitIndex = [];
@@ -42,7 +43,6 @@ const setupEventListeners_selectedHabitSettings = function() {
     document.querySelector('#add_habit').addEventListener('click', addHabit);
 };
 
-let color = document.querySelector('.color');
 
 let loadHabit = function () {
   if (habit == 'Training') {

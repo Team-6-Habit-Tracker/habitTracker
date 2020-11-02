@@ -1,8 +1,6 @@
 let menu = document.querySelector('.menu');
 let dropDown = document.querySelector('.drop-down');
 
-// let doneHabitID;
-
 const setupEventListeners = function () {
   menu.addEventListener('click', displayMenu);
 
@@ -26,13 +24,7 @@ const displayMenu = function () {
     dropDown.classList.add('hidden');
   }
 };
-// Retrieve the local storage for addedHabit array which is the array to store all the added habits
-const retrieveLocalStorage_dropDown = function () {
-  if (JSON.parse(localStorage.getItem('added'))) {
-    addedHabits = JSON.parse(localStorage.getItem('added'));
-    habitManueList();
-  }
-};
+
 // Function to display the added habit in the drop down manue, which is being called while calling the date from local storage.
 let habitManueList = function () {
   for (let i = 0; i < addedHabits.length; i++) {
@@ -83,7 +75,13 @@ const goBack = function () {
     window.history.back();
 };
 
-console.log(document.referrer);
+// Retrieve the local storage for addedHabit array which is the array to store all the added habits
+const retrieveLocalStorage_dropDown = function () {
+  if (JSON.parse(localStorage.getItem('added'))) {
+    addedHabits = JSON.parse(localStorage.getItem('added'));
+    habitManueList();
+  }
+};
 
 setupEventListeners();
 retrieveLocalStorage_dropDown();

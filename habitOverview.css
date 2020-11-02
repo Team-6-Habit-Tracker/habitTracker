@@ -13,59 +13,25 @@ a:active,
 a:link,
 a:visited {
   text-decoration: none;
-  color: #472d30;
 }
 
 a:hover {
-  color: #fff;
   opacity: 0.3;
 }
 
-body {
-  margin: 0 auto;
-  max-width: 400px;
-  width: 100%;
-  min-height: 100vh;
-  /* background-image: linear-gradient(100deg, #aa767f, #bb737f, #dd8997); */
-  background-repeat: no-repeat;
-  align-items: center;
-  /* padding: 1.875rem 0; */
-}
-
-.hidden {
-  display: none;
-}
-
-.overview-title {
-  color: #fff;
-  font-size: 1rem;
-
-  padding-bottom: 2rem;
-}
-
-h3 {
-  margin: 0 1rem;
+h3 { /* day */
+  margin: 1rem;
   width: 110px;
   color: rgb(158, 119, 119);
 }
 
 .fa-caret-left {
+  margin-top: 2rem;
   margin-left: 2rem;
 }
 
 .fas:hover {
   cursor: pointer;
-}
-.container h2 {
-  height: 100px;
-  width: 130px;
-  border-radius: 100%;
-  text-align: center;
-  max-width: 100px;
-}
-
-.container i {
-  margin-top: 1rem;
 }
 
 .container {
@@ -79,13 +45,26 @@ h3 {
   padding: 1275rem, 1.875rem;
 }
 
+.container h2 {
+  height: 100px;
+  width: 130px;
+  border-radius: 100%;
+  text-align: center;
+  max-width: 100px;
+}
+
+.container i {
+  margin-top: 1rem;
+}
+
+
 .habit-item {
   z-index: 200;
 
   position: relative;
   height: 129px;
   width: 129px;
-  /* background-color: #e26d5c; */
+  
   color: #fff;
   border-radius: 100%;
   box-shadow: -2px 3px 3px rgba(0, 0, 0, 0.3);
@@ -100,9 +79,13 @@ h3 {
   cursor: pointer;
 }
 
-/* added to hide divs when not selected */
-.hidden {
-  display: none;
+.habit-title {
+  position: absolute;
+  color: #472d30;
+  font-weight: bold;
+  font-size: 0.7rem;
+  position: absolute;
+  top: 135px;
 }
 
 /* when a habit is complete */
@@ -131,51 +114,15 @@ h3 {
   cursor: pointer;
 }
 
-.habit-title {
-  position: absolute;
-  color: #472d30;
-  font-weight: bold;
-  font-size: 0.7rem;
-  position: absolute;
-  top: 135px;
-}
-
-footer {
-  background-image: linear-gradient(to top, #79c2cf, rgb(104, 181, 201) 33%);
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  font-size: 1.25rem;
-  padding: 0.5rem 1rem;
-}
-/*footer {
-  position: fixed;
-  width: 400px;
-  bottom: 0px;
-  padding-top: 2rem;
-  color: #472d30;
-  display: grid;
-  grid-gap: 15rem;
-  grid-template-columns: repeat(2, 1fr);
-} */
-
 .go-to {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  color: #472d30;
   font-weight: bold;
   font-size: 1.3rem;
-  /*padding-right: 15px;*/
   padding: 0.5rem 1rem;
 }
 
-.fa-plus-circle {
-  color: #fff;
-}
-.fa-calendar-alt {
-  color: #fff;
-}
 #addCircle {
   opacity: 0.4;
   background-color: rgb(197, 197, 219);

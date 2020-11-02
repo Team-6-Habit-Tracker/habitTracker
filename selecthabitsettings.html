@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Habit settings</title>
     <!--FONTS-->
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+
     <!--CSS-->
     <link rel="stylesheet" href="color.css" />
-
     <link rel="stylesheet" href="selecthabitsettings.css" type="text/css" />
 
     <!-- Font awesome link -->
@@ -24,12 +23,13 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
-    <div class="back_x">
-      <a href="select_habit.html">
-        <i class="fas fa-times"></i>
-      </a>
-    </div>
+
+    <a href="select_habit.html" class="back_x">
+      <i class="fas fa-times"></i>
+    </a>
+
     <section>
       <div class="habit_container color">
         <i class="" id="icon"> </i>
@@ -39,10 +39,12 @@
     </section>
 
     <main>
+
       <label for="frequency" class="habit_text">
         <br />
-        How many times per week do you want to complete this habit?</label
-      >
+        How many times per week do you want to complete this habit?
+      </label>
+
       <form class="selecttime">
         <select id="frequency">
           <option value = "1">1</option>
@@ -66,13 +68,13 @@
             <option value = "19">19</option>
             <option value = "20">20</option>
             <option value = "21">21</option>
-
         </select>
+
         <input type="button" value="Add habit" id="add_habit" />
       </form>
+
     </main>
+
     <script src="selectedHabitSettings.js"></script>
-    <!-- <script src="common.js"></script> -->
-    <footer></footer>
   </body>
 </html>
